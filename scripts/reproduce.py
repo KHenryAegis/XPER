@@ -158,7 +158,19 @@ def families(rates):
         places = 2 if label.startswith("Weak") else 1
         rows.append({"row":label,**{f:f"{100*mean(rates[r][t] for r in names for t in tasks if family(t)==f):.{places}f}"
                                       for f in labels.values()}})
-    write_table("table7_families",rows,["row",*labels.values()])
+    strong_runs = dict(zip(METHODS, STRONG))
+    contrast = {"row": "Transfer ICL minus GRPO (pp)"}
+    interval = {"row": "Paired 95% task-bootstrap interval (pp)"}
+    for name in labels.values():
+        ids = sorted(t for t in tasks if family(t) == name)
+        arms = np.array([[[100 * rates[run][t] for t in ids] for run in strong_runs[method]]
+                         for method in ("Transfer ICL", "GRPO")])
+        icl, grpo = core.bootstrap_arms(arms)
+        low, high = core.ci(icl - grpo)
+        contrast[name] = f"{arms[0].mean() - arms[1].mean():+.1f}"
+        interval[name] = f"[{low:+.1f}, {high:+.1f}]"
+    rows.extend([contrast, interval])
+    write_table("table7_families", rows, ["row", *labels.values()])
 
 
 def injection(rates, rounds):
