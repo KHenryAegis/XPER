@@ -1,0 +1,1322 @@
+exp_id,env,arm,seed,round,cumulative_target_calls,train_success,mixed_groups,groups,cumulative_injections
+REF,telecom,No injection,601,0,421,0.0,0,16,0
+REF,telecom,No injection,601,1,887,0.0,0,16,0
+REF,telecom,No injection,601,2,1340,0.0078,1,16,0
+REF,telecom,No injection,601,3,1733,0.0234,2,16,0
+REF,telecom,No injection,601,4,2104,0.0,0,16,0
+REF,telecom,No injection,601,5,2641,0.0,0,16,0
+REF,telecom,No injection,601,6,3109,0.0,0,16,0
+REF,telecom,No injection,601,7,3464,0.0,0,16,0
+REF,telecom,No injection,601,8,3928,0.0,0,16,0
+REF,telecom,No injection,601,9,4411,0.0156,1,16,0
+REF,telecom,No injection,601,10,4802,0.0,0,16,0
+REF,telecom,No injection,601,11,5255,0.0156,2,16,0
+REF,telecom,No injection,601,12,5814,0.0,0,16,0
+REF,telecom,No injection,601,13,6289,0.0,0,16,0
+REF,telecom,No injection,601,14,6788,0.0078,1,16,0
+REF,telecom,No injection,601,15,7292,0.0078,1,16,0
+REF,telecom,No injection,601,16,7721,0.0078,1,16,0
+REF,telecom,No injection,601,17,8254,0.0,0,16,0
+REF,telecom,No injection,601,18,8754,0.0,0,16,0
+REF,telecom,No injection,601,19,9222,0.0312,2,16,0
+REF,telecom,No injection,601,20,9765,0.0078,1,16,0
+REF,telecom,No injection,601,21,10198,0.0156,2,16,0
+REF,telecom,No injection,601,22,10691,0.0156,1,16,0
+REF,telecom,No injection,601,23,11238,0.0156,1,16,0
+REF,telecom,No injection,601,24,11811,0.0,0,16,0
+REF,telecom,No injection,601,25,12287,0.0156,1,16,0
+REF,telecom,No injection,601,26,12996,0.0547,3,16,0
+REF,telecom,No injection,601,27,13494,0.0156,1,16,0
+REF,telecom,No injection,601,28,13897,0.0078,1,16,0
+REF,telecom,No injection,601,29,14494,0.0312,2,16,0
+REF,telecom,No injection,601,30,14971,0.0078,1,16,0
+REF,telecom,No injection,601,31,15483,0.0312,2,16,0
+REF,telecom,No injection,601,32,15995,0.0156,1,16,0
+REF,telecom,No injection,601,33,16732,0.0,0,16,0
+REF,telecom,No injection,601,34,17353,0.0391,2,16,0
+REF,telecom,No injection,601,35,17966,0.0156,2,16,0
+REF,telecom,No injection,601,36,18537,0.0,0,16,0
+REF,telecom,No injection,601,37,19080,0.0234,1,16,0
+REF,telecom,No injection,601,38,19621,0.0,0,16,0
+REF,telecom,No injection,601,39,20197,0.0234,3,16,0
+REF,telecom,No injection,601,40,20853,0.0078,1,16,0
+REF,telecom,No injection,601,41,21414,0.0469,3,16,0
+REF,telecom,No injection,601,42,22079,0.0078,1,16,0
+REF,telecom,No injection,601,43,22754,0.0,0,16,0
+REF,telecom,No injection,601,44,23404,0.0,0,16,0
+REF,telecom,No injection,601,45,23966,0.0,0,16,0
+REF,telecom,No injection,601,46,24580,0.0156,1,16,0
+REF,telecom,No injection,601,47,25266,0.0469,2,16,0
+REF,telecom,No injection,601,48,25836,0.0,0,16,0
+REF,telecom,No injection,601,49,26546,0.0391,1,16,0
+REF,telecom,No injection,601,50,27112,0.0078,1,16,0
+REF,telecom,No injection,601,51,27776,0.0312,2,16,0
+REF,telecom,No injection,601,52,28434,0.0078,1,16,0
+REF,telecom,No injection,601,53,29043,0.0156,1,16,0
+REF,telecom,No injection,601,54,29654,0.0078,1,16,0
+REF,telecom,No injection,601,55,30316,0.0078,1,16,0
+REF,telecom,No injection,601,56,31082,0.0,0,16,0
+REF,telecom,No injection,601,57,31714,0.0312,1,16,0
+REF,telecom,No injection,601,58,32331,0.0234,1,16,0
+REF,telecom,No injection,601,59,32992,0.0,0,16,0
+REF,telecom,No injection,601,60,33731,0.0,0,16,0
+REF,telecom,No injection,601,61,34456,0.0,0,16,0
+REF,telecom,No injection,601,62,35057,0.0078,1,16,0
+REF,telecom,No injection,601,63,35723,0.0078,1,16,0
+REF,telecom,No injection,601,64,36389,0.0,0,16,0
+REF,telecom,No injection,601,65,37083,0.0469,2,16,0
+REF,telecom,No injection,601,66,37832,0.0469,1,16,0
+REF,telecom,No injection,601,67,38546,0.0,0,16,0
+REF,telecom,No injection,601,68,39298,0.0156,2,16,0
+REF,telecom,No injection,601,69,39953,0.0,0,16,0
+REF,telecom,No injection,601,70,40516,0.0078,1,16,0
+REF,telecom,No injection,601,71,41217,0.0078,1,16,0
+REF,telecom,No injection,601,72,41778,0.0,0,16,0
+REF,telecom,No injection,601,73,42432,0.0469,2,16,0
+REF,telecom,No injection,601,74,43043,0.0,0,16,0
+REF,telecom,No injection,601,75,43731,0.0078,1,16,0
+REF,telecom,No injection,601,76,44391,0.0078,1,16,0
+REF,telecom,No injection,601,77,45218,0.0,0,16,0
+REF,telecom,No injection,602,0,516,0.0,0,16,0
+REF,telecom,No injection,602,1,931,0.0078,1,16,0
+REF,telecom,No injection,602,2,1379,0.0312,2,16,0
+REF,telecom,No injection,602,3,1747,0.0078,1,16,0
+REF,telecom,No injection,602,4,2292,0.0,0,16,0
+REF,telecom,No injection,602,5,2769,0.0,0,16,0
+REF,telecom,No injection,602,6,3117,0.0,0,16,0
+REF,telecom,No injection,602,7,3519,0.0,0,16,0
+REF,telecom,No injection,602,8,3986,0.0234,1,16,0
+REF,telecom,No injection,602,9,4358,0.0,0,16,0
+REF,telecom,No injection,602,10,4794,0.0078,1,16,0
+REF,telecom,No injection,602,11,5363,0.0,0,16,0
+REF,telecom,No injection,602,12,5784,0.0,0,16,0
+REF,telecom,No injection,602,13,6237,0.0,0,16,0
+REF,telecom,No injection,602,14,6816,0.0156,2,16,0
+REF,telecom,No injection,602,15,7281,0.0078,1,16,0
+REF,telecom,No injection,602,16,7791,0.0,0,16,0
+REF,telecom,No injection,602,17,8240,0.0078,1,16,0
+REF,telecom,No injection,602,18,8810,0.0469,3,16,0
+REF,telecom,No injection,602,19,9372,0.0156,2,16,0
+REF,telecom,No injection,602,20,9861,0.0234,2,16,0
+REF,telecom,No injection,602,21,10348,0.0078,1,16,0
+REF,telecom,No injection,602,22,10922,0.0156,2,16,0
+REF,telecom,No injection,602,23,11497,0.0,0,16,0
+REF,telecom,No injection,602,24,12014,0.0078,1,16,0
+REF,telecom,No injection,602,25,12577,0.0469,3,16,0
+REF,telecom,No injection,602,26,13094,0.0078,1,16,0
+REF,telecom,No injection,602,27,13468,0.0078,1,16,0
+REF,telecom,No injection,602,28,14039,0.0312,3,16,0
+REF,telecom,No injection,602,29,14526,0.0078,1,16,0
+REF,telecom,No injection,602,30,15079,0.0312,2,16,0
+REF,telecom,No injection,602,31,15628,0.0234,1,16,0
+REF,telecom,No injection,602,32,16296,0.0,0,16,0
+REF,telecom,No injection,602,33,16899,0.0312,1,16,0
+REF,telecom,No injection,602,34,17523,0.0156,2,16,0
+REF,telecom,No injection,602,35,18053,0.0,0,16,0
+REF,telecom,No injection,602,36,18559,0.0312,1,16,0
+REF,telecom,No injection,602,37,19099,0.0,0,16,0
+REF,telecom,No injection,602,38,19693,0.0312,4,16,0
+REF,telecom,No injection,602,39,20336,0.0078,1,16,0
+REF,telecom,No injection,602,40,20876,0.0625,3,16,0
+REF,telecom,No injection,602,41,21605,0.0,0,16,0
+REF,telecom,No injection,602,42,22299,0.0,0,16,0
+REF,telecom,No injection,602,43,22867,0.0078,1,16,0
+REF,telecom,No injection,602,44,23368,0.0,0,16,0
+REF,telecom,No injection,602,45,23961,0.0234,1,16,0
+REF,telecom,No injection,602,46,24657,0.0469,3,16,0
+REF,telecom,No injection,602,47,25148,0.0078,1,16,0
+REF,telecom,No injection,602,48,25868,0.0312,1,16,0
+REF,telecom,No injection,602,49,26446,0.0,0,16,0
+REF,telecom,No injection,602,50,27148,0.0234,2,16,0
+REF,telecom,No injection,602,51,27863,0.0234,2,16,0
+REF,telecom,No injection,602,52,28436,0.0234,1,16,0
+REF,telecom,No injection,602,53,29038,0.0156,2,16,0
+REF,telecom,No injection,602,54,29656,0.0078,1,16,0
+REF,telecom,No injection,602,55,30461,0.0,0,16,0
+REF,telecom,No injection,602,56,31109,0.0312,1,16,0
+REF,telecom,No injection,602,57,31826,0.0234,1,16,0
+REF,telecom,No injection,602,58,32564,0.0,0,16,0
+REF,telecom,No injection,602,59,33348,0.0,0,16,0
+REF,telecom,No injection,602,60,34103,0.0,0,16,0
+REF,telecom,No injection,602,61,34687,0.0078,1,16,0
+REF,telecom,No injection,602,62,35311,0.0078,1,16,0
+REF,telecom,No injection,602,63,36056,0.0,0,16,0
+REF,telecom,No injection,602,64,36681,0.0469,2,16,0
+REF,telecom,No injection,602,65,37355,0.0547,1,16,0
+REF,telecom,No injection,602,66,38052,0.0,0,16,0
+REF,telecom,No injection,602,67,38737,0.0078,1,16,0
+REF,telecom,No injection,602,68,39369,0.0,0,16,0
+REF,telecom,No injection,602,69,39961,0.0078,1,16,0
+REF,telecom,No injection,602,70,40573,0.0078,1,16,0
+REF,telecom,No injection,602,71,41154,0.0,0,16,0
+REF,telecom,No injection,602,72,41754,0.0391,2,16,0
+REF,telecom,No injection,602,73,42355,0.0078,1,16,0
+REF,telecom,No injection,602,74,42976,0.0078,1,16,0
+REF,telecom,No injection,602,75,43637,0.0156,2,16,0
+REF,telecom,No injection,602,76,44487,0.0,0,16,0
+REF,telecom,No injection,603,0,454,0.0078,1,16,0
+REF,telecom,No injection,603,1,841,0.0156,2,16,0
+REF,telecom,No injection,603,2,1207,0.0,0,16,0
+REF,telecom,No injection,603,3,1685,0.0,0,16,0
+REF,telecom,No injection,603,4,2148,0.0,0,16,0
+REF,telecom,No injection,603,5,2461,0.0,0,16,0
+REF,telecom,No injection,603,6,2884,0.0,0,16,0
+REF,telecom,No injection,603,7,3374,0.0156,1,16,0
+REF,telecom,No injection,603,8,3731,0.0,0,16,0
+REF,telecom,No injection,603,9,4180,0.0078,1,16,0
+REF,telecom,No injection,603,10,4730,0.0,0,16,0
+REF,telecom,No injection,603,11,5183,0.0,0,16,0
+REF,telecom,No injection,603,12,5686,0.0,0,16,0
+REF,telecom,No injection,603,13,6161,0.0078,1,16,0
+REF,telecom,No injection,603,14,6614,0.0078,1,16,0
+REF,telecom,No injection,603,15,7094,0.0,0,16,0
+REF,telecom,No injection,603,16,7567,0.0,0,16,0
+REF,telecom,No injection,603,17,8120,0.0469,3,16,0
+REF,telecom,No injection,603,18,8713,0.0156,2,16,0
+REF,telecom,No injection,603,19,9182,0.0156,2,16,0
+REF,telecom,No injection,603,20,9674,0.0234,2,16,0
+REF,telecom,No injection,603,21,10178,0.0156,1,16,0
+REF,telecom,No injection,603,22,10709,0.0,0,16,0
+REF,telecom,No injection,603,23,11254,0.0,0,16,0
+REF,telecom,No injection,603,24,11911,0.0547,3,16,0
+REF,telecom,No injection,603,25,12441,0.0156,1,16,0
+REF,telecom,No injection,603,26,12856,0.0,0,16,0
+REF,telecom,No injection,603,27,13429,0.0391,3,16,0
+REF,telecom,No injection,603,28,13953,0.0,0,16,0
+REF,telecom,No injection,603,29,14489,0.0391,2,16,0
+REF,telecom,No injection,603,30,15026,0.0234,1,16,0
+REF,telecom,No injection,603,31,15714,0.0,0,16,0
+REF,telecom,No injection,603,32,16328,0.0312,1,16,0
+REF,telecom,No injection,603,33,16951,0.0156,2,16,0
+REF,telecom,No injection,603,34,17568,0.0,0,16,0
+REF,telecom,No injection,603,35,18086,0.0234,1,16,0
+REF,telecom,No injection,603,36,18625,0.0,0,16,0
+REF,telecom,No injection,603,37,19135,0.0312,4,16,0
+REF,telecom,No injection,603,38,19722,0.0,0,16,0
+REF,telecom,No injection,603,39,20244,0.0703,4,16,0
+REF,telecom,No injection,603,40,20962,0.0078,1,16,0
+REF,telecom,No injection,603,41,21628,0.0,0,16,0
+REF,telecom,No injection,603,42,22227,0.0156,1,16,0
+REF,telecom,No injection,603,43,22796,0.0,0,16,0
+REF,telecom,No injection,603,44,23442,0.0234,1,16,0
+REF,telecom,No injection,603,45,24187,0.0312,1,16,0
+REF,telecom,No injection,603,46,24701,0.0078,1,16,0
+REF,telecom,No injection,603,47,25407,0.0391,1,16,0
+REF,telecom,No injection,603,48,25963,0.0234,1,16,0
+REF,telecom,No injection,603,49,26608,0.0312,2,16,0
+REF,telecom,No injection,603,50,27309,0.0234,2,16,0
+REF,telecom,No injection,603,51,27971,0.0156,1,16,0
+REF,telecom,No injection,603,52,28542,0.0078,1,16,0
+REF,telecom,No injection,603,53,29227,0.0156,1,16,0
+REF,telecom,No injection,603,54,29978,0.0078,1,16,0
+REF,telecom,No injection,603,55,30620,0.0391,1,16,0
+REF,telecom,No injection,603,56,31327,0.0312,1,16,0
+REF,telecom,No injection,603,57,32068,0.0078,1,16,0
+REF,telecom,No injection,603,58,32868,0.0,0,16,0
+REF,telecom,No injection,603,59,33646,0.0,0,16,0
+REF,telecom,No injection,603,60,34297,0.0156,2,16,0
+REF,telecom,No injection,603,61,34972,0.0078,1,16,0
+REF,telecom,No injection,603,62,35731,0.0078,1,16,0
+REF,telecom,No injection,603,63,36375,0.0625,2,16,0
+REF,telecom,No injection,603,64,37100,0.0469,1,16,0
+REF,telecom,No injection,603,65,37854,0.0078,1,16,0
+REF,telecom,No injection,603,66,38619,0.0078,1,16,0
+REF,telecom,No injection,603,67,39337,0.0,0,16,0
+REF,telecom,No injection,603,68,39977,0.0078,1,16,0
+REF,telecom,No injection,603,69,40667,0.0,0,16,0
+REF,telecom,No injection,603,70,41356,0.0078,1,16,0
+REF,telecom,No injection,603,71,42000,0.0391,2,16,0
+REF,telecom,No injection,603,72,42663,0.0,0,16,0
+REF,telecom,No injection,603,73,43355,0.0078,1,16,0
+REF,telecom,No injection,603,74,44062,0.0,0,16,0
+REF,telecom,No injection,603,75,44796,0.0,0,16,0
+REF,telecom,Real source,601,0,448,0.0,16,16,16
+REF,telecom,Real source,601,1,1583,0.0156,16,16,30
+REF,telecom,Real source,601,2,3157,0.0781,15,16,43
+REF,telecom,Real source,601,3,5065,0.1016,16,16,54
+REF,telecom,Real source,601,4,6990,0.2422,16,16,61
+REF,telecom,Real source,601,5,8999,0.0703,16,16,70
+REF,telecom,Real source,601,6,11024,0.125,16,16,77
+REF,telecom,Real source,601,7,13220,0.2266,16,16,79
+REF,telecom,Real source,601,8,15096,0.2891,16,16,82
+REF,telecom,Real source,601,9,17036,0.4219,16,16,84
+REF,telecom,Real source,601,10,18816,0.4297,16,16,87
+REF,telecom,Real source,601,11,20539,0.4453,16,16,88
+REF,telecom,Real source,601,12,22395,0.4688,16,16,90
+REF,telecom,Real source,601,13,24243,0.4453,15,16,94
+REF,telecom,Real source,601,14,26005,0.6484,15,16,94
+REF,telecom,Real source,601,15,27694,0.6406,13,16,95
+REF,telecom,Real source,601,16,29330,0.7188,13,16,95
+REF,telecom,Real source,601,17,31065,0.6484,14,16,95
+REF,telecom,Real source,601,18,32779,0.6562,13,16,95
+REF,telecom,Real source,601,19,34325,0.7734,11,16,95
+REF,telecom,Real source,601,20,35941,0.7188,11,16,95
+REF,telecom,Real source,601,21,37428,0.8125,10,16,95
+REF,telecom,Real source,601,22,39054,0.75,12,16,95
+REF,telecom,Real source,601,23,40645,0.8125,12,16,95
+REF,telecom,Real source,601,24,42228,0.8594,12,16,95
+REF,telecom,Real source,601,25,43709,0.8125,12,16,95
+REF,telecom,Real source,601,26,45195,0.8516,12,16,95
+REF,telecom,Real source,602,0,471,0.0,16,16,16
+REF,telecom,Real source,602,1,1410,0.0547,16,16,30
+REF,telecom,Real source,602,2,2964,0.0547,16,16,42
+REF,telecom,Real source,602,3,4706,0.1641,16,16,52
+REF,telecom,Real source,602,4,6428,0.0859,16,16,62
+REF,telecom,Real source,602,5,8284,0.1016,16,16,70
+REF,telecom,Real source,602,6,10145,0.0859,16,16,78
+REF,telecom,Real source,602,7,12021,0.1484,16,16,84
+REF,telecom,Real source,602,8,13926,0.2266,16,16,89
+REF,telecom,Real source,602,9,15759,0.2109,16,16,91
+REF,telecom,Real source,602,10,17488,0.2656,16,16,94
+REF,telecom,Real source,602,11,19211,0.2031,16,16,97
+REF,telecom,Real source,602,12,21186,0.2812,16,16,100
+REF,telecom,Real source,602,13,22794,0.4766,12,16,100
+REF,telecom,Real source,602,14,24294,0.5156,12,16,100
+REF,telecom,Real source,602,15,25825,0.5312,15,16,100
+REF,telecom,Real source,602,16,27312,0.4688,14,16,100
+REF,telecom,Real source,602,17,28911,0.5156,14,16,100
+REF,telecom,Real source,602,18,30479,0.6172,11,16,100
+REF,telecom,Real source,602,19,32154,0.5234,14,16,100
+REF,telecom,Real source,602,20,33739,0.6641,14,16,100
+REF,telecom,Real source,602,21,35441,0.6562,14,16,100
+REF,telecom,Real source,602,22,36982,0.7422,12,16,100
+REF,telecom,Real source,602,23,38563,0.8438,10,16,100
+REF,telecom,Real source,602,24,40099,0.8125,10,16,100
+REF,telecom,Real source,602,25,41626,0.7734,13,16,100
+REF,telecom,Real source,602,26,43224,0.8203,10,16,100
+REF,telecom,Real source,602,27,44782,0.7734,12,16,100
+REF,telecom,Real source,603,0,463,0.0078,16,16,15
+REF,telecom,Real source,603,1,1620,0.0469,16,16,28
+REF,telecom,Real source,603,2,3359,0.1484,16,16,37
+REF,telecom,Real source,603,3,5117,0.0312,16,16,50
+REF,telecom,Real source,603,4,6951,0.0547,16,16,60
+REF,telecom,Real source,603,5,9037,0.0547,16,16,72
+REF,telecom,Real source,603,6,11071,0.1484,16,16,78
+REF,telecom,Real source,603,7,13037,0.2734,16,16,83
+REF,telecom,Real source,603,8,14986,0.2578,16,16,87
+REF,telecom,Real source,603,9,16771,0.2891,16,16,89
+REF,telecom,Real source,603,10,18734,0.2891,16,16,91
+REF,telecom,Real source,603,11,20638,0.3359,16,16,95
+REF,telecom,Real source,603,12,22384,0.5391,15,16,96
+REF,telecom,Real source,603,13,24022,0.5469,14,16,97
+REF,telecom,Real source,603,14,25708,0.6875,13,16,97
+REF,telecom,Real source,603,15,27423,0.6719,15,16,97
+REF,telecom,Real source,603,16,29133,0.6484,15,16,97
+REF,telecom,Real source,603,17,30746,0.7109,13,16,97
+REF,telecom,Real source,603,18,32469,0.6875,13,16,97
+REF,telecom,Real source,603,19,34110,0.7969,11,16,97
+REF,telecom,Real source,603,20,35870,0.7578,13,16,97
+REF,telecom,Real source,603,21,37567,0.7734,14,16,97
+REF,telecom,Real source,603,22,39311,0.9141,8,16,97
+REF,telecom,Real source,603,23,40978,0.8594,11,16,97
+REF,telecom,Real source,603,24,42564,0.8594,10,16,97
+REF,telecom,Real source,603,25,44243,0.8672,9,16,97
+REF,telecom,Real source,603,26,45907,0.8672,11,16,97
+REF,math,No injection,601,0,445,0.0156,1,16,0
+REF,math,No injection,601,1,891,0.0391,4,16,0
+REF,math,No injection,601,2,1368,0.0234,3,16,0
+REF,math,No injection,601,3,1819,0.0234,2,16,0
+REF,math,No injection,601,4,2272,0.0156,2,16,0
+REF,math,No injection,601,5,2700,0.0078,1,16,0
+REF,math,No injection,601,6,3224,0.0156,2,16,0
+REF,math,No injection,601,7,3636,0.0234,2,16,0
+REF,math,No injection,601,8,4112,0.0,0,16,0
+REF,math,No injection,601,9,4506,0.0234,2,16,0
+REF,math,No injection,601,10,4942,0.0234,3,16,0
+REF,math,No injection,601,11,5390,0.0234,3,16,0
+REF,math,No injection,601,12,5782,0.0312,4,16,0
+REF,math,No injection,601,13,6269,0.0156,2,16,0
+REF,math,No injection,601,14,6819,0.0469,5,16,0
+REF,math,No injection,601,15,7380,0.0234,3,16,0
+REF,math,No injection,601,16,7910,0.0078,1,16,0
+REF,math,No injection,601,17,8428,0.0156,2,16,0
+REF,math,No injection,601,18,8876,0.0234,3,16,0
+REF,math,No injection,601,19,9290,0.0,0,16,0
+REF,math,No injection,601,20,9688,0.0391,3,16,0
+REF,math,No injection,601,21,10217,0.0312,2,16,0
+REF,math,No injection,601,22,10726,0.0078,1,16,0
+REF,math,No injection,602,0,470,0.0312,3,16,0
+REF,math,No injection,602,1,1053,0.0,0,16,0
+REF,math,No injection,602,2,1385,0.0,0,16,0
+REF,math,No injection,602,3,1779,0.0156,1,16,0
+REF,math,No injection,602,4,2254,0.0,0,16,0
+REF,math,No injection,602,5,2667,0.0312,3,16,0
+REF,math,No injection,602,6,3126,0.0156,2,16,0
+REF,math,No injection,602,7,3586,0.0078,1,16,0
+REF,math,No injection,602,8,3938,0.0547,4,16,0
+REF,math,No injection,602,9,4444,0.0156,2,16,0
+REF,math,No injection,602,10,4947,0.0156,2,16,0
+REF,math,No injection,602,11,5423,0.0,0,16,0
+REF,math,No injection,602,12,5876,0.0078,1,16,0
+REF,math,No injection,602,13,6334,0.0312,4,16,0
+REF,math,No injection,602,14,6750,0.0312,4,16,0
+REF,math,No injection,602,15,7180,0.0312,4,16,0
+REF,math,No injection,602,16,7726,0.0,0,16,0
+REF,math,No injection,602,17,8221,0.0312,4,16,0
+REF,math,No injection,602,18,8713,0.0391,3,16,0
+REF,math,No injection,602,19,9224,0.0,0,16,0
+REF,math,No injection,602,20,9782,0.0078,1,16,0
+REF,math,No injection,602,21,10285,0.0469,4,16,0
+REF,math,No injection,602,22,10821,0.0547,5,16,0
+REF,math,No injection,603,0,464,0.0156,2,16,0
+REF,math,No injection,603,1,799,0.0156,2,16,0
+REF,math,No injection,603,2,1219,0.0078,1,16,0
+REF,math,No injection,603,3,1677,0.0078,1,16,0
+REF,math,No injection,603,4,2075,0.0,0,16,0
+REF,math,No injection,603,5,2479,0.0078,1,16,0
+REF,math,No injection,603,6,2904,0.0,0,16,0
+REF,math,No injection,603,7,3228,0.0312,2,16,0
+REF,math,No injection,603,8,3603,0.0078,1,16,0
+REF,math,No injection,603,9,4070,0.0391,5,16,0
+REF,math,No injection,603,10,4532,0.0156,2,16,0
+REF,math,No injection,603,11,5062,0.0312,4,16,0
+REF,math,No injection,603,12,5565,0.0391,4,16,0
+REF,math,No injection,603,13,6082,0.0234,2,16,0
+REF,math,No injection,603,14,6633,0.0156,2,16,0
+REF,math,No injection,603,15,7140,0.0156,2,16,0
+REF,math,No injection,603,16,7635,0.0234,3,16,0
+REF,math,No injection,603,17,8160,0.0156,2,16,0
+REF,math,No injection,603,18,8734,0.0156,2,16,0
+REF,math,No injection,603,19,9347,0.0391,3,16,0
+REF,math,No injection,603,20,9836,0.0469,6,16,0
+REF,math,No injection,603,21,10383,0.0078,1,16,0
+REF,math,No injection,603,22,10880,0.0312,4,16,0
+REF,math,Real source,601,0,425,0.0156,16,16,15
+REF,math,Real source,601,1,993,0.0703,16,16,26
+REF,math,Real source,601,2,1571,0.0781,16,16,35
+REF,math,Real source,601,3,2282,0.0469,16,16,45
+REF,math,Real source,601,4,3097,0.0781,16,16,53
+REF,math,Real source,601,5,3914,0.1094,16,16,62
+REF,math,Real source,601,6,4842,0.1094,16,16,68
+REF,math,Real source,601,7,5692,0.0391,16,16,79
+REF,math,Real source,601,8,6369,0.0469,16,16,90
+REF,math,Real source,601,9,6957,0.2812,16,16,96
+REF,math,Real source,601,10,7459,0.2031,13,16,100
+REF,math,Real source,601,11,8146,0.25,12,16,100
+REF,math,Real source,601,12,8815,0.2656,14,16,100
+REF,math,Real source,601,13,9451,0.1562,7,16,100
+REF,math,Real source,601,14,10056,0.2188,11,16,100
+REF,math,Real source,601,15,10645,0.1094,7,16,100
+REF,math,Real source,602,0,470,0.0312,16,16,13
+REF,math,Real source,602,1,1061,0.0078,16,16,28
+REF,math,Real source,602,2,1896,0.0312,16,16,41
+REF,math,Real source,602,3,2653,0.1406,16,16,49
+REF,math,Real source,602,4,3402,0.1016,16,16,57
+REF,math,Real source,602,5,4276,0.1016,16,16,65
+REF,math,Real source,602,6,5115,0.0781,16,16,75
+REF,math,Real source,602,7,5843,0.0391,16,16,87
+REF,math,Real source,602,8,6596,0.2891,16,16,92
+REF,math,Real source,602,9,7220,0.2344,16,16,96
+REF,math,Real source,602,10,7749,0.2266,15,16,100
+REF,math,Real source,602,11,8233,0.2656,13,16,100
+REF,math,Real source,602,12,8723,0.2344,6,16,100
+REF,math,Real source,602,13,9321,0.2344,11,16,100
+REF,math,Real source,602,14,9922,0.2422,12,16,100
+REF,math,Real source,602,15,10512,0.2656,12,16,100
+REF,math,Real source,603,0,464,0.0234,16,16,14
+REF,math,Real source,603,1,1123,0.0078,16,16,29
+REF,math,Real source,603,2,1881,0.0547,16,16,39
+REF,math,Real source,603,3,2702,0.0391,16,16,50
+REF,math,Real source,603,4,3544,0.1406,16,16,56
+REF,math,Real source,603,5,4414,0.0781,16,16,66
+REF,math,Real source,603,6,5150,0.0547,16,16,75
+REF,math,Real source,603,7,5661,0.2656,15,16,81
+REF,math,Real source,603,8,6065,0.1797,16,16,86
+REF,math,Real source,603,9,6536,0.3047,16,16,89
+REF,math,Real source,603,10,7038,0.2891,16,16,91
+REF,math,Real source,603,11,7583,0.2734,16,16,96
+REF,math,Real source,603,12,8135,0.2812,16,16,99
+REF,math,Real source,603,13,8791,0.2188,13,16,100
+REF,math,Real source,603,14,9470,0.2578,13,16,100
+REF,math,Real source,603,15,10205,0.1328,9,16,100
+REF,math,Real source,603,16,10820,0.3203,14,16,100
+E2,telecom,"No injection, total-cost budget 88.8k",601,0,422,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,1,886,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,2,1333,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,3,1749,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,4,2164,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,5,2646,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,6,3094,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,7,3477,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,8,3884,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,9,4365,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,10,4785,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,11,5213,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,12,5737,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,13,6153,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,14,6650,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,15,7126,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,16,7559,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,17,8052,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,18,8495,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,19,9013,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,20,9528,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,21,10016,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,22,10524,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,23,11074,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,24,11609,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,25,12122,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,26,12781,0.0547,4,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,27,13257,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,28,13645,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,29,14147,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,30,14635,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,31,15092,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,32,15592,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,33,16219,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,34,16807,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,35,17339,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,36,17790,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,37,18280,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,38,18806,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,39,19280,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,40,19784,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,41,20245,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,42,20814,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,43,21378,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,44,21905,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,45,22393,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,46,22907,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,47,23473,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,48,23945,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,49,24589,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,50,25081,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,51,25704,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,52,26270,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,53,26807,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,54,27419,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,55,28053,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,56,28722,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,57,29400,0.0469,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,58,30056,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,59,30595,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,60,31319,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,61,32011,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,62,32611,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,63,33223,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,64,33950,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,65,34584,0.0703,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,66,35299,0.0469,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,67,36009,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,68,36647,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,69,37178,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,70,37742,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,71,38347,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,72,38955,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,73,39508,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,74,40072,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,75,40636,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,76,41324,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,77,42126,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,78,42785,0.0547,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,79,43367,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,80,44056,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,81,44755,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,82,45482,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,83,46209,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,84,46821,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,85,47584,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,86,48355,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,87,48996,0.0547,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,88,49629,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,89,50275,0.0312,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,90,51047,0.0312,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,91,51817,0.0469,4,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,92,52525,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,93,53349,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,94,53992,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,95,54733,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,96,55479,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,97,56289,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,98,57059,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,99,57787,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,100,58582,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,101,59248,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,102,60070,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,103,60863,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,104,61605,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,105,62509,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,106,63232,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,107,63974,0.1406,5,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,108,64818,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,109,65765,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,110,66580,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,111,67359,0.0312,4,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,112,68081,0.0391,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,113,68880,0.0859,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,114,69688,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,115,70579,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,116,71551,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,117,72360,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,118,73320,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,119,74210,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,120,75259,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,121,76204,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,122,77231,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,123,78258,0.0859,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,124,79124,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,125,80225,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,126,81129,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,127,82082,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,128,83094,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,129,83973,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,130,84734,0.0469,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,131,85516,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,132,86454,0.0781,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,133,87504,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,134,88590,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",601,135,89531,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,0,499,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,1,925,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,2,1312,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,3,1686,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,4,2164,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,5,2682,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,6,3057,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,7,3480,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,8,3966,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,9,4346,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,10,4815,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,11,5327,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,12,5804,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,13,6324,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,14,6837,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,15,7311,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,16,7766,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,17,8261,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,18,8764,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,19,9362,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,20,9791,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,21,10261,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,22,10794,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,23,11302,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,24,11804,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,25,12425,0.0469,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,26,12918,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,27,13350,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,28,13916,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,29,14427,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,30,14910,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,31,15362,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,32,16008,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,33,16599,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,34,17151,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,35,17744,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,36,18265,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,37,18819,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,38,19413,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,39,19954,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,40,20512,0.0391,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,41,21130,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,42,21795,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,43,22348,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,44,22932,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,45,23482,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,46,24248,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,47,24728,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,48,25344,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,49,25867,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,50,26560,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,51,27219,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,52,27820,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,53,28423,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,54,29085,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,55,29883,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,56,30503,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,57,31175,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,58,31867,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,59,32584,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,60,33391,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,61,34009,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,62,34662,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,63,35412,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,64,36098,0.0469,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,65,36771,0.0469,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,66,37577,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,67,38242,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,68,38943,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,69,39499,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,70,40193,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,71,40837,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,72,41509,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,73,42156,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,74,42836,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,75,43584,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,76,44409,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,77,45119,0.0703,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,78,45776,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,79,46469,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,80,47151,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,81,47990,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,82,48724,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,83,49336,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,84,49947,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,85,50713,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,86,51399,0.0625,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,87,52162,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,88,52967,0.0547,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,89,53780,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,90,54600,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,91,55428,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,92,56232,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",602,93,56993,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,0,452,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,1,862,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,2,1232,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,3,1751,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,4,2245,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,5,2600,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,6,3035,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,7,3548,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,8,3959,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,9,4429,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,10,5038,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,11,5507,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,12,6058,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,13,6560,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,14,6976,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,15,7454,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,16,7958,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,17,8483,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,18,9001,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,19,9466,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,20,10011,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,21,10576,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,22,11102,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,23,11558,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,24,12185,0.0469,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,25,12690,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,26,13047,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,27,13680,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,28,14191,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,29,14701,0.0312,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,30,15196,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,31,15832,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,32,16487,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,33,17062,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,34,17577,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,35,18085,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,36,18636,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,37,19192,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,38,19777,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,39,20348,0.0391,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,40,21028,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,41,21689,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,42,22327,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,43,22845,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,44,23376,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,45,24012,0.0312,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,46,24544,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,47,25214,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,48,25764,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,49,26462,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,50,27115,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,51,27669,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,52,28315,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,53,28988,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,54,29667,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,55,30312,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,56,31013,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,57,31709,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,58,32460,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,59,33188,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,60,33834,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,61,34420,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,62,35118,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,63,35798,0.0625,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,64,36549,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,65,37258,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,66,37951,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,67,38604,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,68,39193,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,69,39760,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,70,40442,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,71,41139,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,72,41748,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,73,42358,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,74,43053,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,75,43874,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,76,44476,0.0625,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,77,45101,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,78,45767,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,79,46478,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,80,47154,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,81,47924,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,82,48626,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,83,49449,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,84,50214,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,85,50864,0.0469,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,86,51528,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,87,52204,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,88,53002,0.0391,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,89,53781,0.0391,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,90,54501,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,91,55247,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,92,55882,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,93,56736,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,94,57610,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,95,58426,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,96,59249,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,97,60003,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,98,60866,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,99,61593,0.0234,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,100,62398,0.0312,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,101,63229,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,102,64059,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,103,64957,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,104,65707,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,105,66506,0.1328,4,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,106,67263,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,107,68229,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,108,68957,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,109,69838,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,110,70568,0.0391,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,111,71423,0.0547,4,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,112,72207,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,113,73035,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,114,74046,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,115,74879,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,116,75782,0.0,0,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,117,76727,0.0156,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,118,77606,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,119,78538,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,120,79563,0.0234,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,121,80387,0.0781,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,122,81204,0.0234,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,123,82324,0.0391,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,124,83153,0.0078,1,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,125,84154,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,126,85154,0.0156,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,127,86053,0.0312,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,128,86886,0.0469,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,129,87707,0.0312,2,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,130,88575,0.0781,3,16,0
+E2,telecom,"No injection, total-cost budget 88.8k",603,131,89514,0.0312,2,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,601,0,431,0.0,0,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,601,1,924,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,601,2,1330,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,601,3,1712,0.0234,2,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,601,4,2053,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,601,5,2620,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,601,6,3117,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,7,3466,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,8,3985,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,9,4438,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,10,4812,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,11,5349,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,12,5853,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,13,6300,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,14,6846,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,15,7389,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,16,7876,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,17,8502,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,18,9056,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,19,9639,0.0312,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,20,10180,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,21,10651,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,22,11098,0.0234,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,23,11609,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,24,12161,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,25,12690,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,26,13359,0.0625,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,27,13901,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,28,14319,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,29,14935,0.0234,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,30,15414,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,31,15880,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,32,16426,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,33,17154,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,34,17744,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,35,18308,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,36,18860,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,37,19460,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,38,20028,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,39,20569,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,40,21167,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,41,21676,0.0469,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,42,22309,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,43,22993,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,44,23568,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,45,24159,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,46,24677,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,47,25364,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,48,25822,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,49,26529,0.0391,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,50,27020,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,51,27636,0.0312,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,52,28161,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,53,28639,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,54,29143,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,55,29774,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,56,30443,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,57,31060,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,58,31749,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,59,32386,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,60,32976,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,61,33700,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,62,34284,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,63,34881,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,64,35557,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,65,36196,0.0547,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,66,36934,0.0469,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,67,37688,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,68,38383,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,69,38974,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,70,39541,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,71,40108,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,72,40731,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,73,41356,0.0469,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,74,41945,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,75,42530,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,76,43178,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,77,43971,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,601,78,44656,0.0625,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,0,516,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,602,1,944,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,602,2,1335,0.0234,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,602,3,1693,0.0,0,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,602,4,2218,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,602,5,2696,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,602,6,3082,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,7,3532,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,8,4028,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,9,4414,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,10,4951,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,11,5511,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,12,5985,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,13,6498,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,14,7071,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,15,7571,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,16,8068,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,17,8610,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,18,9173,0.0312,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,19,9775,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,20,10221,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,21,10667,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,22,11227,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,23,11813,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,24,12351,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,25,12976,0.0469,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,26,13469,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,27,13877,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,28,14470,0.0391,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,29,14958,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,30,15513,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,31,16050,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,32,16747,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,33,17342,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,34,17957,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,35,18494,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,36,19041,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,37,19678,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,38,20268,0.0234,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,39,20845,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,40,21423,0.0469,4,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,41,22140,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,42,22852,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,43,23472,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,44,24138,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,45,24691,0.0312,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,46,25368,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,47,25920,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,48,26672,0.0391,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,49,27223,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,50,27904,0.0312,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,51,28509,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,52,29065,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,53,29675,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,54,30311,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,55,31022,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,56,31613,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,57,32263,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,58,32887,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,59,33629,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,60,34327,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,61,34977,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,62,35605,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,63,36283,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,64,36994,0.0625,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,65,37722,0.0469,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,66,38450,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,67,39178,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,68,39801,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,69,40405,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,70,41050,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,71,41722,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,72,42381,0.0547,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,73,42976,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,74,43593,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,75,44312,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,602,76,45053,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,0,453,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,603,1,865,0.0312,2,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,603,2,1224,0.0,0,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,603,3,1749,0.0078,1,16,0
+E4a,telecom,ReLIFT-style interleaved SFT,603,4,2202,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,603,5,2544,0.0,0,16,64
+E4a,telecom,ReLIFT-style interleaved SFT,603,6,3001,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,7,3484,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,8,3880,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,9,4412,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,10,5076,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,11,5518,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,12,6093,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,13,6611,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,14,7127,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,15,7786,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,16,8342,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,17,8886,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,18,9424,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,19,9902,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,20,10412,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,21,10969,0.0234,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,22,11536,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,23,12096,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,24,12839,0.0547,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,25,13306,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,26,13752,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,27,14415,0.0312,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,28,14946,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,29,15477,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,30,16047,0.0234,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,31,16794,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,32,17447,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,33,18052,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,34,18654,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,35,19174,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,36,19742,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,37,20343,0.0234,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,38,20908,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,39,21428,0.0469,3,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,40,22131,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,41,22790,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,42,23470,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,43,24086,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,44,24632,0.0156,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,45,25260,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,46,25827,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,47,26525,0.0391,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,48,27090,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,49,27755,0.0234,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,50,28474,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,51,29056,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,52,29640,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,53,30287,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,54,31060,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,55,31651,0.0312,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,56,32278,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,57,32897,0.0156,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,58,33672,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,59,34383,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,60,35027,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,61,35633,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,62,36325,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,63,37011,0.0547,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,64,37741,0.0469,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,65,38460,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,66,39167,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,67,39741,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,68,40284,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,69,40854,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,70,41567,0.0,0,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,71,42225,0.0391,2,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,72,42807,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,73,43430,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,74,44172,0.0078,1,16,100
+E4a,telecom,ReLIFT-style interleaved SFT,603,75,44964,0.0,0,16,100
+E4b,telecom,LUFFY-style mixed-policy,601,0,394,0.0,16,16,16
+E4b,telecom,LUFFY-style mixed-policy,601,1,1394,0.0089,16,16,32
+E4b,telecom,LUFFY-style mixed-policy,601,2,2657,0.0714,15,16,48
+E4b,telecom,LUFFY-style mixed-policy,601,3,3845,0.0536,16,16,64
+E4b,telecom,LUFFY-style mixed-policy,601,4,5118,0.1518,16,16,80
+E4b,telecom,LUFFY-style mixed-policy,601,5,6219,0.0357,16,16,96
+E4b,telecom,LUFFY-style mixed-policy,601,6,7273,0.0089,16,16,112
+E4b,telecom,LUFFY-style mixed-policy,601,7,8569,0.0268,16,16,128
+E4b,telecom,LUFFY-style mixed-policy,601,8,9723,0.0536,16,16,144
+E4b,telecom,LUFFY-style mixed-policy,601,9,10998,0.1071,16,16,160
+E4b,telecom,LUFFY-style mixed-policy,601,10,12110,0.0982,16,16,176
+E4b,telecom,LUFFY-style mixed-policy,601,11,13393,0.0982,16,16,192
+E4b,telecom,LUFFY-style mixed-policy,601,12,14739,0.125,16,16,208
+E4b,telecom,LUFFY-style mixed-policy,601,13,16148,0.1071,16,16,224
+E4b,telecom,LUFFY-style mixed-policy,601,14,17320,0.1429,16,16,240
+E4b,telecom,LUFFY-style mixed-policy,601,15,18428,0.2143,16,16,256
+E4b,telecom,LUFFY-style mixed-policy,601,16,19730,0.2321,15,16,272
+E4b,telecom,LUFFY-style mixed-policy,601,17,20860,0.1964,16,16,288
+E4b,telecom,LUFFY-style mixed-policy,601,18,21837,0.2768,15,16,304
+E4b,telecom,LUFFY-style mixed-policy,601,19,22904,0.2589,15,16,320
+E4b,telecom,LUFFY-style mixed-policy,601,20,24015,0.1964,15,16,336
+E4b,telecom,LUFFY-style mixed-policy,601,21,25089,0.2768,15,16,352
+E4b,telecom,LUFFY-style mixed-policy,601,22,26087,0.2232,15,16,368
+E4b,telecom,LUFFY-style mixed-policy,601,23,27090,0.2232,16,16,384
+E4b,telecom,LUFFY-style mixed-policy,601,24,28172,0.2679,16,16,400
+E4b,telecom,LUFFY-style mixed-policy,601,25,29150,0.3125,15,16,416
+E4b,telecom,LUFFY-style mixed-policy,601,26,30102,0.2857,15,16,432
+E4b,telecom,LUFFY-style mixed-policy,601,27,31139,0.2143,15,16,448
+E4b,telecom,LUFFY-style mixed-policy,601,28,32091,0.2768,15,16,464
+E4b,telecom,LUFFY-style mixed-policy,601,29,33130,0.3304,15,16,480
+E4b,telecom,LUFFY-style mixed-policy,601,30,34279,0.2411,16,16,496
+E4b,telecom,LUFFY-style mixed-policy,601,31,35342,0.3839,15,16,512
+E4b,telecom,LUFFY-style mixed-policy,601,32,36390,0.375,14,16,528
+E4b,telecom,LUFFY-style mixed-policy,601,33,37473,0.3929,15,16,544
+E4b,telecom,LUFFY-style mixed-policy,601,34,38618,0.4821,15,16,560
+E4b,telecom,LUFFY-style mixed-policy,601,35,39779,0.4732,15,16,576
+E4b,telecom,LUFFY-style mixed-policy,601,36,41046,0.3482,15,16,592
+E4b,telecom,LUFFY-style mixed-policy,601,37,42304,0.4732,14,16,608
+E4b,telecom,LUFFY-style mixed-policy,601,38,43552,0.5893,14,16,624
+E4b,telecom,LUFFY-style mixed-policy,601,39,44744,0.5804,14,16,640
+E4b,telecom,LUFFY-style mixed-policy,602,0,420,0.0089,16,16,16
+E4b,telecom,LUFFY-style mixed-policy,602,1,1139,0.0714,15,16,32
+E4b,telecom,LUFFY-style mixed-policy,602,2,2180,0.0268,16,16,48
+E4b,telecom,LUFFY-style mixed-policy,602,3,3389,0.1518,16,16,64
+E4b,telecom,LUFFY-style mixed-policy,602,4,4343,0.0357,16,16,80
+E4b,telecom,LUFFY-style mixed-policy,602,5,5231,0.0268,16,16,96
+E4b,telecom,LUFFY-style mixed-policy,602,6,5982,0.0089,16,16,112
+E4b,telecom,LUFFY-style mixed-policy,602,7,6943,0.0536,16,16,128
+E4b,telecom,LUFFY-style mixed-policy,602,8,7894,0.0536,16,16,144
+E4b,telecom,LUFFY-style mixed-policy,602,9,9028,0.0714,16,16,160
+E4b,telecom,LUFFY-style mixed-policy,602,10,10314,0.0982,16,16,176
+E4b,telecom,LUFFY-style mixed-policy,602,11,11698,0.0268,16,16,192
+E4b,telecom,LUFFY-style mixed-policy,602,12,13181,0.1161,16,16,208
+E4b,telecom,LUFFY-style mixed-policy,602,13,14619,0.1964,16,16,224
+E4b,telecom,LUFFY-style mixed-policy,602,14,16009,0.2321,16,16,240
+E4b,telecom,LUFFY-style mixed-policy,602,15,17403,0.3393,15,16,256
+E4b,telecom,LUFFY-style mixed-policy,602,16,18794,0.2143,16,16,272
+E4b,telecom,LUFFY-style mixed-policy,602,17,20111,0.3036,16,16,288
+E4b,telecom,LUFFY-style mixed-policy,602,18,21675,0.3929,15,16,304
+E4b,telecom,LUFFY-style mixed-policy,602,19,23122,0.3571,16,16,320
+E4b,telecom,LUFFY-style mixed-policy,602,20,24702,0.4732,15,16,336
+E4b,telecom,LUFFY-style mixed-policy,602,21,26298,0.4554,13,16,352
+E4b,telecom,LUFFY-style mixed-policy,602,22,27766,0.5446,14,16,368
+E4b,telecom,LUFFY-style mixed-policy,602,23,29337,0.4375,15,16,384
+E4b,telecom,LUFFY-style mixed-policy,602,24,30863,0.5,14,16,400
+E4b,telecom,LUFFY-style mixed-policy,602,25,32263,0.5625,14,16,416
+E4b,telecom,LUFFY-style mixed-policy,602,26,33813,0.4554,15,16,432
+E4b,telecom,LUFFY-style mixed-policy,602,27,35248,0.4821,14,16,448
+E4b,telecom,LUFFY-style mixed-policy,602,28,36717,0.5446,14,16,464
+E4b,telecom,LUFFY-style mixed-policy,602,29,38243,0.4643,15,16,480
+E4b,telecom,LUFFY-style mixed-policy,602,30,39512,0.5982,13,16,496
+E4b,telecom,LUFFY-style mixed-policy,602,31,40941,0.5536,13,16,512
+E4b,telecom,LUFFY-style mixed-policy,602,32,42424,0.5804,16,16,528
+E4b,telecom,LUFFY-style mixed-policy,602,33,43983,0.5714,13,16,544
+E4b,telecom,LUFFY-style mixed-policy,602,34,45351,0.5804,14,16,560
+E4b,telecom,LUFFY-style mixed-policy,603,0,388,0.0089,16,16,16
+E4b,telecom,LUFFY-style mixed-policy,603,1,1264,0.0179,16,16,32
+E4b,telecom,LUFFY-style mixed-policy,603,2,2446,0.1339,16,16,48
+E4b,telecom,LUFFY-style mixed-policy,603,3,3491,0.0179,16,16,64
+E4b,telecom,LUFFY-style mixed-policy,603,4,4585,0.0179,16,16,80
+E4b,telecom,LUFFY-style mixed-policy,603,5,5037,0.0,16,16,96
+E4b,telecom,LUFFY-style mixed-policy,603,6,6200,0.0536,16,16,112
+E4b,telecom,LUFFY-style mixed-policy,603,7,7168,0.0536,16,16,128
+E4b,telecom,LUFFY-style mixed-policy,603,8,8365,0.0357,16,16,144
+E4b,telecom,LUFFY-style mixed-policy,603,9,9793,0.0536,16,16,160
+E4b,telecom,LUFFY-style mixed-policy,603,10,11212,0.0357,16,16,176
+E4b,telecom,LUFFY-style mixed-policy,603,11,12740,0.0804,16,16,192
+E4b,telecom,LUFFY-style mixed-policy,603,12,14327,0.1786,16,16,208
+E4b,telecom,LUFFY-style mixed-policy,603,13,15714,0.25,16,16,224
+E4b,telecom,LUFFY-style mixed-policy,603,14,17214,0.2857,15,16,240
+E4b,telecom,LUFFY-style mixed-policy,603,15,18674,0.2143,16,16,256
+E4b,telecom,LUFFY-style mixed-policy,603,16,20016,0.3393,14,16,272
+E4b,telecom,LUFFY-style mixed-policy,603,17,21534,0.3214,15,16,288
+E4b,telecom,LUFFY-style mixed-policy,603,18,22950,0.3036,15,16,304
+E4b,telecom,LUFFY-style mixed-policy,603,19,24409,0.3839,15,16,320
+E4b,telecom,LUFFY-style mixed-policy,603,20,25939,0.4018,14,16,336
+E4b,telecom,LUFFY-style mixed-policy,603,21,27342,0.4196,15,16,352
+E4b,telecom,LUFFY-style mixed-policy,603,22,28976,0.3929,16,16,368
+E4b,telecom,LUFFY-style mixed-policy,603,23,30537,0.4464,14,16,384
+E4b,telecom,LUFFY-style mixed-policy,603,24,32004,0.5536,13,16,400
+E4b,telecom,LUFFY-style mixed-policy,603,25,33465,0.3661,15,16,416
+E4b,telecom,LUFFY-style mixed-policy,603,26,34991,0.4107,14,16,432
+E4b,telecom,LUFFY-style mixed-policy,603,27,36655,0.4375,15,16,448
+E4b,telecom,LUFFY-style mixed-policy,603,28,38391,0.4196,16,16,464
+E4b,telecom,LUFFY-style mixed-policy,603,29,39828,0.4821,15,16,480
+E4b,telecom,LUFFY-style mixed-policy,603,30,41258,0.5714,11,16,496
+E4b,telecom,LUFFY-style mixed-policy,603,31,42850,0.5268,14,16,512
+E4b,telecom,LUFFY-style mixed-policy,603,32,44370,0.5357,13,16,528
+E4b,telecom,LUFFY-style mixed-policy,603,33,45966,0.6339,14,16,544
+E5,telecom,"Self-replay (own successes, cap 100)",601,0,441,0.0,0,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",601,1,906,0.0,0,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",601,2,1334,0.0078,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",601,3,1734,0.0156,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",601,4,2097,0.0,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,5,2678,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,6,3166,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,7,3535,0.0078,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,8,3951,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,9,4385,0.0312,2,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,10,4751,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,11,5207,0.0078,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",601,12,5702,0.0,2,16,3
+E5,telecom,"Self-replay (own successes, cap 100)",601,13,6102,0.0,1,16,4
+E5,telecom,"Self-replay (own successes, cap 100)",601,14,6661,0.0,1,16,5
+E5,telecom,"Self-replay (own successes, cap 100)",601,15,7119,0.0078,2,16,6
+E5,telecom,"Self-replay (own successes, cap 100)",601,16,7485,0.0078,1,16,6
+E5,telecom,"Self-replay (own successes, cap 100)",601,17,7947,0.0078,2,16,7
+E5,telecom,"Self-replay (own successes, cap 100)",601,18,8441,0.0,3,16,10
+E5,telecom,"Self-replay (own successes, cap 100)",601,19,8975,0.0625,4,16,10
+E5,telecom,"Self-replay (own successes, cap 100)",601,20,9505,0.0078,2,16,11
+E5,telecom,"Self-replay (own successes, cap 100)",601,21,9963,0.0234,4,16,13
+E5,telecom,"Self-replay (own successes, cap 100)",601,22,10408,0.0078,2,16,14
+E5,telecom,"Self-replay (own successes, cap 100)",601,23,10902,0.0156,5,16,17
+E5,telecom,"Self-replay (own successes, cap 100)",601,24,11377,0.0,1,16,18
+E5,telecom,"Self-replay (own successes, cap 100)",601,25,11872,0.0,3,16,21
+E5,telecom,"Self-replay (own successes, cap 100)",601,26,12514,0.0391,4,16,22
+E5,telecom,"Self-replay (own successes, cap 100)",601,27,13107,0.0078,3,16,24
+E5,telecom,"Self-replay (own successes, cap 100)",601,28,13547,0.0078,2,16,25
+E5,telecom,"Self-replay (own successes, cap 100)",601,29,14069,0.0078,3,16,27
+E5,telecom,"Self-replay (own successes, cap 100)",601,30,14692,0.0078,2,16,28
+E5,telecom,"Self-replay (own successes, cap 100)",601,31,15278,0.0469,3,16,29
+E5,telecom,"Self-replay (own successes, cap 100)",601,32,15872,0.0078,2,16,30
+E5,telecom,"Self-replay (own successes, cap 100)",601,33,16554,0.0,1,16,31
+E5,telecom,"Self-replay (own successes, cap 100)",601,34,17161,0.0312,5,16,35
+E5,telecom,"Self-replay (own successes, cap 100)",601,35,17784,0.0156,4,16,37
+E5,telecom,"Self-replay (own successes, cap 100)",601,36,18485,0.0,0,16,37
+E5,telecom,"Self-replay (own successes, cap 100)",601,37,19052,0.0234,3,16,38
+E5,telecom,"Self-replay (own successes, cap 100)",601,38,19801,0.0156,3,16,39
+E5,telecom,"Self-replay (own successes, cap 100)",601,39,20543,0.0234,5,16,41
+E5,telecom,"Self-replay (own successes, cap 100)",601,40,21451,0.0,3,16,44
+E5,telecom,"Self-replay (own successes, cap 100)",601,41,22301,0.0781,7,16,45
+E5,telecom,"Self-replay (own successes, cap 100)",601,42,23186,0.0547,6,16,47
+E5,telecom,"Self-replay (own successes, cap 100)",601,43,24009,0.0078,4,16,50
+E5,telecom,"Self-replay (own successes, cap 100)",601,44,24801,0.0391,4,16,51
+E5,telecom,"Self-replay (own successes, cap 100)",601,45,25753,0.0391,3,16,52
+E5,telecom,"Self-replay (own successes, cap 100)",601,46,26819,0.0469,5,16,53
+E5,telecom,"Self-replay (own successes, cap 100)",601,47,27826,0.0703,5,16,54
+E5,telecom,"Self-replay (own successes, cap 100)",601,48,29016,0.0391,5,16,57
+E5,telecom,"Self-replay (own successes, cap 100)",601,49,30272,0.0703,5,16,60
+E5,telecom,"Self-replay (own successes, cap 100)",601,50,31455,0.0391,6,16,64
+E5,telecom,"Self-replay (own successes, cap 100)",601,51,32629,0.0156,6,16,68
+E5,telecom,"Self-replay (own successes, cap 100)",601,52,33710,0.0781,5,16,69
+E5,telecom,"Self-replay (own successes, cap 100)",601,53,34729,0.0469,3,16,70
+E5,telecom,"Self-replay (own successes, cap 100)",601,54,35787,0.0312,3,16,71
+E5,telecom,"Self-replay (own successes, cap 100)",601,55,36840,0.0469,3,16,71
+E5,telecom,"Self-replay (own successes, cap 100)",601,56,38090,0.0469,5,16,73
+E5,telecom,"Self-replay (own successes, cap 100)",601,57,39443,0.1016,4,16,74
+E5,telecom,"Self-replay (own successes, cap 100)",601,58,40649,0.0547,7,16,79
+E5,telecom,"Self-replay (own successes, cap 100)",601,59,41788,0.0469,8,16,84
+E5,telecom,"Self-replay (own successes, cap 100)",601,60,43178,0.0156,3,16,85
+E5,telecom,"Self-replay (own successes, cap 100)",601,61,44448,0.0703,8,16,87
+E5,telecom,"Self-replay (own successes, cap 100)",602,0,502,0.0078,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",602,1,932,0.0078,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",602,2,1328,0.0234,2,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",602,3,1686,0.0,2,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",602,4,2164,0.0,0,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",602,5,2646,0.0,0,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",602,6,3033,0.0078,1,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",602,7,3483,0.0,1,16,3
+E5,telecom,"Self-replay (own successes, cap 100)",602,8,3929,0.0156,1,16,3
+E5,telecom,"Self-replay (own successes, cap 100)",602,9,4282,0.0,1,16,4
+E5,telecom,"Self-replay (own successes, cap 100)",602,10,4728,0.0,0,16,4
+E5,telecom,"Self-replay (own successes, cap 100)",602,11,5241,0.0,1,16,5
+E5,telecom,"Self-replay (own successes, cap 100)",602,12,5693,0.0,1,16,6
+E5,telecom,"Self-replay (own successes, cap 100)",602,13,6274,0.0,0,16,6
+E5,telecom,"Self-replay (own successes, cap 100)",602,14,6748,0.0078,3,16,8
+E5,telecom,"Self-replay (own successes, cap 100)",602,15,7189,0.0156,1,16,8
+E5,telecom,"Self-replay (own successes, cap 100)",602,16,7763,0.0078,3,16,10
+E5,telecom,"Self-replay (own successes, cap 100)",602,17,8248,0.0234,4,16,12
+E5,telecom,"Self-replay (own successes, cap 100)",602,18,8806,0.0469,3,16,13
+E5,telecom,"Self-replay (own successes, cap 100)",602,19,9414,0.0078,2,16,14
+E5,telecom,"Self-replay (own successes, cap 100)",602,20,9826,0.0234,4,16,15
+E5,telecom,"Self-replay (own successes, cap 100)",602,21,10368,0.0,0,16,15
+E5,telecom,"Self-replay (own successes, cap 100)",602,22,10843,0.0156,4,16,17
+E5,telecom,"Self-replay (own successes, cap 100)",602,23,11337,0.0,1,16,18
+E5,telecom,"Self-replay (own successes, cap 100)",602,24,11835,0.0078,3,16,20
+E5,telecom,"Self-replay (own successes, cap 100)",602,25,12546,0.0703,6,16,23
+E5,telecom,"Self-replay (own successes, cap 100)",602,26,13216,0.0156,4,16,25
+E5,telecom,"Self-replay (own successes, cap 100)",602,27,13742,0.0156,4,16,27
+E5,telecom,"Self-replay (own successes, cap 100)",602,28,14384,0.0234,3,16,27
+E5,telecom,"Self-replay (own successes, cap 100)",602,29,15080,0.0,0,16,27
+E5,telecom,"Self-replay (own successes, cap 100)",602,30,15675,0.0391,5,16,30
+E5,telecom,"Self-replay (own successes, cap 100)",602,31,16200,0.0312,4,16,31
+E5,telecom,"Self-replay (own successes, cap 100)",602,32,17107,0.0,3,16,34
+E5,telecom,"Self-replay (own successes, cap 100)",602,33,17814,0.0312,4,16,37
+E5,telecom,"Self-replay (own successes, cap 100)",602,34,18539,0.0234,4,16,38
+E5,telecom,"Self-replay (own successes, cap 100)",602,35,19323,0.0078,3,16,40
+E5,telecom,"Self-replay (own successes, cap 100)",602,36,20175,0.0391,5,16,42
+E5,telecom,"Self-replay (own successes, cap 100)",602,37,21093,0.0078,3,16,44
+E5,telecom,"Self-replay (own successes, cap 100)",602,38,21895,0.0312,6,16,47
+E5,telecom,"Self-replay (own successes, cap 100)",602,39,22888,0.0078,3,16,49
+E5,telecom,"Self-replay (own successes, cap 100)",602,40,23702,0.0859,9,16,53
+E5,telecom,"Self-replay (own successes, cap 100)",602,41,24611,0.0469,7,16,56
+E5,telecom,"Self-replay (own successes, cap 100)",602,42,25463,0.0156,6,16,60
+E5,telecom,"Self-replay (own successes, cap 100)",602,43,26404,0.0156,5,16,63
+E5,telecom,"Self-replay (own successes, cap 100)",602,44,27278,0.0156,5,16,66
+E5,telecom,"Self-replay (own successes, cap 100)",602,45,28235,0.0547,7,16,67
+E5,telecom,"Self-replay (own successes, cap 100)",602,46,29188,0.0859,6,16,68
+E5,telecom,"Self-replay (own successes, cap 100)",602,47,30279,0.0547,9,16,71
+E5,telecom,"Self-replay (own successes, cap 100)",602,48,31416,0.0703,7,16,74
+E5,telecom,"Self-replay (own successes, cap 100)",602,49,32427,0.0469,8,16,77
+E5,telecom,"Self-replay (own successes, cap 100)",602,50,33406,0.0703,8,16,79
+E5,telecom,"Self-replay (own successes, cap 100)",602,51,34376,0.0625,8,16,83
+E5,telecom,"Self-replay (own successes, cap 100)",602,52,35068,0.0547,6,16,86
+E5,telecom,"Self-replay (own successes, cap 100)",602,53,35961,0.0547,5,16,88
+E5,telecom,"Self-replay (own successes, cap 100)",602,54,36825,0.0625,9,16,92
+E5,telecom,"Self-replay (own successes, cap 100)",602,55,37726,0.0859,9,16,93
+E5,telecom,"Self-replay (own successes, cap 100)",602,56,38688,0.0938,10,16,97
+E5,telecom,"Self-replay (own successes, cap 100)",602,57,39596,0.1172,10,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,58,40398,0.1406,8,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,59,41321,0.0781,6,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,60,42149,0.0703,6,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,61,42996,0.1172,6,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,62,43799,0.1562,9,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",602,63,44623,0.1172,6,16,100
+E5,telecom,"Self-replay (own successes, cap 100)",603,0,453,0.0078,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",603,1,879,0.0234,1,16,0
+E5,telecom,"Self-replay (own successes, cap 100)",603,2,1239,0.0,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,3,1806,0.0078,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,4,2273,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,5,2606,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,6,3036,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,7,3510,0.0234,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,8,3886,0.0,0,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,9,4325,0.0078,1,16,1
+E5,telecom,"Self-replay (own successes, cap 100)",603,10,4875,0.0,1,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",603,11,5364,0.0,0,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",603,12,5907,0.0,0,16,2
+E5,telecom,"Self-replay (own successes, cap 100)",603,13,6447,0.0078,2,16,3
+E5,telecom,"Self-replay (own successes, cap 100)",603,14,6848,0.0078,1,16,3
+E5,telecom,"Self-replay (own successes, cap 100)",603,15,7340,0.0,1,16,4
+E5,telecom,"Self-replay (own successes, cap 100)",603,16,7956,0.0,3,16,7
+E5,telecom,"Self-replay (own successes, cap 100)",603,17,8564,0.0469,3,16,7
+E5,telecom,"Self-replay (own successes, cap 100)",603,18,9070,0.0,1,16,8
+E5,telecom,"Self-replay (own successes, cap 100)",603,19,9551,0.0234,3,16,8
+E5,telecom,"Self-replay (own successes, cap 100)",603,20,9998,0.0078,1,16,8
+E5,telecom,"Self-replay (own successes, cap 100)",603,21,10556,0.0234,3,16,9
+E5,telecom,"Self-replay (own successes, cap 100)",603,22,11139,0.0078,2,16,10
+E5,telecom,"Self-replay (own successes, cap 100)",603,23,11699,0.0,2,16,12
+E5,telecom,"Self-replay (own successes, cap 100)",603,24,12468,0.0469,5,16,14
+E5,telecom,"Self-replay (own successes, cap 100)",603,25,13087,0.0078,2,16,15
+E5,telecom,"Self-replay (own successes, cap 100)",603,26,13537,0.0078,2,16,16
+E5,telecom,"Self-replay (own successes, cap 100)",603,27,14255,0.0312,3,16,16
+E5,telecom,"Self-replay (own successes, cap 100)",603,28,14872,0.0,1,16,17
+E5,telecom,"Self-replay (own successes, cap 100)",603,29,15453,0.0312,2,16,17
+E5,telecom,"Self-replay (own successes, cap 100)",603,30,15914,0.0391,4,16,19
+E5,telecom,"Self-replay (own successes, cap 100)",603,31,16489,0.0,2,16,21
+E5,telecom,"Self-replay (own successes, cap 100)",603,32,17131,0.0312,5,16,24
+E5,telecom,"Self-replay (own successes, cap 100)",603,33,17925,0.0156,5,16,27
+E5,telecom,"Self-replay (own successes, cap 100)",603,34,18638,0.0,2,16,29
+E5,telecom,"Self-replay (own successes, cap 100)",603,35,19392,0.0391,3,16,29
+E5,telecom,"Self-replay (own successes, cap 100)",603,36,20139,0.0156,3,16,30
+E5,telecom,"Self-replay (own successes, cap 100)",603,37,20991,0.0312,5,16,32
+E5,telecom,"Self-replay (own successes, cap 100)",603,38,21895,0.0078,3,16,34
+E5,telecom,"Self-replay (own successes, cap 100)",603,39,22782,0.0859,7,16,36
+E5,telecom,"Self-replay (own successes, cap 100)",603,40,23819,0.0469,6,16,38
+E5,telecom,"Self-replay (own successes, cap 100)",603,41,24764,0.0156,4,16,40
+E5,telecom,"Self-replay (own successes, cap 100)",603,42,25662,0.0156,3,16,41
+E5,telecom,"Self-replay (own successes, cap 100)",603,43,26614,0.0234,3,16,42
+E5,telecom,"Self-replay (own successes, cap 100)",603,44,27484,0.0156,4,16,44
+E5,telecom,"Self-replay (own successes, cap 100)",603,45,28446,0.0703,5,16,45
+E5,telecom,"Self-replay (own successes, cap 100)",603,46,29420,0.0234,3,16,47
+E5,telecom,"Self-replay (own successes, cap 100)",603,47,30654,0.0625,4,16,48
+E5,telecom,"Self-replay (own successes, cap 100)",603,48,31518,0.0391,6,16,51
+E5,telecom,"Self-replay (own successes, cap 100)",603,49,32670,0.0234,4,16,53
+E5,telecom,"Self-replay (own successes, cap 100)",603,50,33683,0.0469,6,16,56
+E5,telecom,"Self-replay (own successes, cap 100)",603,51,34615,0.0469,3,16,57
+E5,telecom,"Self-replay (own successes, cap 100)",603,52,35404,0.0469,5,16,59
+E5,telecom,"Self-replay (own successes, cap 100)",603,53,36481,0.0391,5,16,62
+E5,telecom,"Self-replay (own successes, cap 100)",603,54,37539,0.0312,6,16,65
+E5,telecom,"Self-replay (own successes, cap 100)",603,55,38509,0.0469,4,16,66
+E5,telecom,"Self-replay (own successes, cap 100)",603,56,39570,0.0703,6,16,68
+E5,telecom,"Self-replay (own successes, cap 100)",603,57,40635,0.0859,9,16,71
+E5,telecom,"Self-replay (own successes, cap 100)",603,58,41925,0.0312,5,16,73
+E5,telecom,"Self-replay (own successes, cap 100)",603,59,43099,0.0703,7,16,75
+E5,telecom,"Self-replay (own successes, cap 100)",603,60,44431,0.0703,7,16,77

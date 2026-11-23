@@ -1,0 +1,5 @@
+setting,validation_gap,format_error_rate,decision,matches_test_best,agree_k1,agree_k2,agree_k4,target_calls,source_calls,validation_task_ids_file
+telecom weak,-3.12,0.5068,transfer SFT,True,1.0,1.0,1.0,432,3304,data/splits/val_probe_tasks.json
+telecom strong,1.25,0.0006,no reuse,False,0.835,0.8985,1.0,3289,3304,data/splits/val_probe_tasks.json
+math weak,-19.38,0.4244,transfer SFT,True,1.0,1.0,1.0,434,833,data/splits/val_probe_tasks.json
+math strong,10.62,0.0725,no reuse,True,0.9695,0.999,1.0,793,833,data/splits/val_probe_tasks.json

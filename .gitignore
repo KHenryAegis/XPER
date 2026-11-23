@@ -1,0 +1,15 @@
+# local experiment stores, training logs and third-party inputs
+/results/
+/logs/
+/third_party/
+/data/external/
+# generated tables, figures and checkpoints of a local run
+/outputs/
+# caches
+.pytest_cache/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*.db-wal
+*.db-shm

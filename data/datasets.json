@@ -1,0 +1,65 @@
+{
+  "_about": "External datasets, benchmark code and models used by the paper. None is redistributed here. tools/check_inputs.py verifies the local copies against this file; tools/fetch_tau2.sh reads the tau2-bench commit from it.",
+  "datasets": {
+    "tau2-bench-telecom": {
+      "used_for": "telecom environment: every telecom experiment (Sections 3-7)",
+      "what": "telecom domain of tau2-bench in solo mode (agent-only, no simulated user); training pool = all telecom_full tasks outside the official test split (2,214 initial states), test = the official 40-task test split",
+      "repository": "https://github.com/sierra-research/tau2-bench",
+      "commit": "5ade54e282a4555e4d6c52d6b9b861ea8872afa6",
+      "license": "MIT",
+      "local_path": "third_party/tau2-bench",
+      "obtain": "bash tools/fetch_tau2.sh",
+      "modifications": "none"
+    },
+    "dapo-math-integer": {
+      "used_for": "math environment: every math experiment",
+      "what": "integer-answer problems of DAPO-Math-17k as packaged by rStar2-Agent (train.jsonl, 14,116 problems); test = 300 problems drawn with seed 0 by xper/mathenv.py, training = the other 13,816",
+      "source": "rStar2-Agent release (train.jsonl)",
+      "local_path": "data/external/math/train.jsonl",
+      "bytes": 17464192,
+      "sha256": "c0f2da4d543eb04ba1cca2548cc057f51bb48dc51e1ca73935012a246862bc41",
+      "obtain": "download train.jsonl from the rStar2-Agent release into data/external/math/"
+    },
+    "toolace": {
+      "used_for": "building the weak telecom start (one epoch of generic function-calling SFT on Qwen3-8B-Base)",
+      "what": "ToolACE function-calling conversations (11,300); scripts/prep_common_sft.py keeps 10,216 after filtering against tau2 tool names",
+      "source": "ToolACE release (Liu et al., ICLR 2025)",
+      "local_path": "data/external/toolace.json",
+      "bytes": 37154735,
+      "sha256": "ba12c083fca7e8da48c67ad5b895e495447da7c66e39a2e19742c082e6cb537e",
+      "obtain": "download the ToolACE data file into data/external/toolace.json",
+      "derived": {
+        "path": "data/external/common_sft.jsonl",
+        "built_by": "python -B scripts/prep_common_sft.py",
+        "bytes": 33104659,
+        "sha256": "2b954566d063ba0ce44624e0cb86433a27378317607a44bc2d9e4e07d98e5f71",
+        "stats": {"source": 11300, "kept": 10216,
+                  "dropped": {"unparsable_call": 265, "leak_term": 75, "bad_tools": 744},
+                  "assistant_action_turns": 9656, "assistant_text_turns": 2980}
+      }
+    }
+  },
+  "models": {
+    "Qwen3-4B-Instruct-2507": {
+      "role": "source model (both environments)",
+      "huggingface": "Qwen/Qwen3-4B-Instruct-2507",
+      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c"
+    },
+    "Qwen3-8B": {
+      "role": "strong target (thinking disabled)",
+      "huggingface": "Qwen/Qwen3-8B",
+      "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+    },
+    "Qwen3-8B-Base": {
+      "role": "weak target after delimiter initialization (scripts/prep_init.py); telecom adds the ToolACE SFT",
+      "huggingface": "Qwen/Qwen3-8B-Base",
+      "index_sha256": "cd39d5e44c5aadfd1954b598883aea1c4a98822a2f7723d214ef2278b7fec2e4"
+    },
+    "Qwen3-4B-Base": {
+      "role": "second target of the permutation control (Table 8)",
+      "huggingface": "Qwen/Qwen3-4B-Base",
+      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c"
+    },
+    "_note": "Expected under $XPER_HOME/models/hf/<name>. index_sha256 is the SHA-256 of model.safetensors.index.json in the copy the experiments used."
+  }
+}

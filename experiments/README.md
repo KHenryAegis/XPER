@@ -1,0 +1,78 @@
+# Experiment groups
+
+Run the commands from the repository root after configuring the training environment in the [project README](../README.md). Run `bash experiments/run_gpu.sh` for the full sequence, or invoke one numbered script after its prerequisites. Each GPU driver writes its own rollout and evaluation records. Step 09 reads the reference records shipped in this repository and can run on its own.
+
+| Step | Script | Paper results | Hardware | Needs |
+|---|---|---|---|---|
+| 0 | `00_setup.sh` | τ²-bench checkout, input check, delimiter-initialized Base checkpoints | CPU | `data/external/` files |
+| 1 | `01_source_logs.sh` | the stored source logs (§5.2) | 8 GPUs | 0 |
+| 2 | `02_telecom_weak.sh` | Table 2 and Table 6, weak telecom start | 8 GPUs | 0, 1 |
+| 3 | `03_telecom_strong.sh` | Table 1; Table 2 (source, strong telecom); Tables 6–7, strong telecom; transfer ICL of both telecom starts; §5.1 overlap check | 8 GPUs | 0–2 |
+| 4 | `04_math.sh` | Table 2 and Table 6, math | 8 GPUs | 0, 1 |
+| 5 | `05_exact_replay.sh` | §3.1 and Figure 2(a), training tasks | CPU | 1–4 |
+| 6 | `06_injection_cohort.sh` | Table 3 (upper block), Tables 4–5, Figure 4, §6.1 controls | 8 GPUs | 0–2 |
+| 7 | `07_alternatives_probe.sh` | Table 3 (lower block), Table 10 | 8 GPUs | 0–2 |
+| 8 | `08_permutation.sh` | Table 8 | 8 GPUs | 0, 1 |
+| 8 | `08_source_scaling.sh` | Source-data scaling ablation in the discussion | 4 GPUs (devices 2–5) | 0–1; full-data reference points from 3 and 8 (permutation) |
+| 9 | `09_tables_figures.sh` | All ten tables or their underlying measurements, Figures 1–4 and source-data scaling | CPU | Included records |
+
+Table 9 (decision guide) is read off Table 6. Figures 2(b,c) use the per-iteration mixed-group counts and held-out pass@8 minus pass@1, and Figures 1 and 3 are
+diagrams; their scripts need no data.
+
+## Where each number comes from
+
+Every evaluation ends its log `results/{eval,math,g1}/<run>.log` with one JSON line (pass@1, pass@n, calls,
+format-error rate); `data/results/eval_summaries.csv` collects these lines for 93 held-out evaluations, including seven scaling evaluations. Means and SDs are
+over the listed seeds.
+
+| Paper item | Runs |
+|---|---|
+| Table 2, telecom | `qwen3-4b-inst` (source), `8b-instruct-start-nothink` (strong), `8b-commonsft` (weak) |
+| Table 2, math | `math-4b-inst`, `math-8b-instruct`, `math-8b-base-eos` (only the weak-start pilot uses 100 problems) |
+| Table 6, telecom weak | zero-shot `8b-commonsft`; SFT `8b-selfexp`; RFT `rft-commonsft-s50{1,2}`; GRPO `grpo-commonsft-s601`; transfer SFT `8b-xfer`; ICL `8b-commonsft-icl6` |
+| Table 6, telecom strong | zero-shot `8b-instruct-start-nothink`; SFT `8b-instruct-selfexp-s40{1,2,3}-nothink`; RFT `rft-instruct-s50{1,2}`; GRPO `grpo-instruct-s60{1,2,3}`; transfer SFT `8b-instruct-xfer-s40{1,2,3}-nothink`; ICL `8b-instruct-icl6`, `-icl6-s1`, `-icl6-s2` |
+| Table 6, math weak | zero-shot `math-8b-base-eos`; SFT `math-8b-base-selfexp`; transfer SFT `math-8b-base-xfer` |
+| Table 6, math strong | zero-shot `math-8b-instruct`; SFT `math-8b-selfexp`; RFT `math-rft-instruct-s50{1,2}`; GRPO `math-grpo-instruct-s60{1,2,3}`; transfer SFT `math-8b-xfer`; ICL `math-8b-icl4` |
+| §6.2 text | ICL k=3 and k=12: `8b-instruct-icl3-s0`, `8b-instruct-icl12-s0`; ICL on transfer SFT: `8b-instruct-xfer-s40{1,2,3}-icl6` |
+| Table 1 | zero-shot start: `grpo-instruct-s60{1,2,3}`; transfer-SFT start (`8b-instruct-xfer-s401`): `grpo-xferstart-s60{1,2}` |
+| Table 7 | source exploration and success splits, weak `td{0,100}-s60{1,2,3}` and the strong-telecom runs of Table 6, grouped by ticket family in step 09 |
+| Table 8 | `init-eos-{8b,4b}`, `fmtctl-{8b,4b}` (permuted), `bc3-{8b,4b}` (real) |
+| Tables 3–5, Figure 4 | `td{0,5,20,100}-s60{1,2}`, `td{0,100}-s603`, `sc-tel-{obs_mask,schema_random}-s60{1,2}`, `sc-math-{none,real}-s60{1,2,3}`; audited by `scripts/analyze_paper.py` |
+| Table 3 (lower), Table 10 | `e2-tel*`, `e4a-tel*`, `e4b-tel*`, `e5-tel*`, `results/probe/e3-*`; assembled by `scripts/analyze_alternatives.py` |
+| Discussion, source-data scaling | `8b-xfer-bare-p{25,50,75}`, `8b-base-xfer-weak-p{25,50,75,100s1}`. Full-data strong baseline uses three transfer seeds. Full-data weak baseline combines `bc3-8b` and `8b-base-xfer-weak-p100s1`. |
+| §6.1, uncapped controls | `tp-{mismatch,shuffle}-s60{1,2}` |
+
+## Conventions
+
+- **Evaluation:** temperature 1.0; telecom: 40 test tasks × 8 samples; math: 300 test problems × 4 samples.
+- **Budgets:** in target environment calls. Self-exploration arms are matched to the source's 44,414 (telecom) and
+  10,403 (math) calls. The cohorts of steps 6–7 charge the same target budgets.
+- **Seeds:** 401–403 for self-exploration and transfer SFT, 501–502 for iterated RFT, 601–603 for GRPO and the
+  cohorts, 20261117 for the probe split and draws.
+- **Outputs:** rollout stores in `results/<tag>.s<seed>/` and `results/pipeline_*/`; evaluations in
+  `results/eval/`, `results/math/`, `results/g1/`; queue logs in `logs/queue/`; checkpoints in `$XPER_HOME/models/xper/`.
+
+## Differences from the original runs
+
+- **GPU sets.** The paper's runs used the GPUs that were free on shared 8-GPU nodes. These scripts fix the GPU
+  sets to the two halves of one node (`HALF_A`, `HALF_B` in `common.sh`). Where a driver shards sampling over
+  its GPUs, the shard count changes which sampling seed each episode gets, not the procedure. The drivers whose
+  shard count defines a dataset keep the paper's count: the telecom source log (8), the self-exploration SFT seeds
+  (6), and the math pipelines (2 or 3).
+- **Retries.** Several runs of step 7 failed on shared GPUs and were rerun under new tags (`e4a-tel-r2`,
+  `e2-tel-r3`, ...). `scripts/jobs_spec.py` writes the attempt the paper reports for each seed, so a rerun produces
+  the reported tags. A fresh run of E2 seed 602 may finish; the paper reports two completed seeds.
+- **One repaired shard.** In math real-source seed 603, one final-round shard failed to persist a lone Unicode
+  surrogate (§5.4). It was resampled once with the same policy and seeds by a one-off script that is not part of
+  this release; the encoding fix is in the released code (`tests/test_unicode_actions.py`), and the compact records include its call bounds. Table 3 charges the conservative 11,236 calls (†).
+
+## Measured run times (NVIDIA H20, 96 GB)
+
+| Run | GPUs | Time |
+|---|---|---|
+| Cohort GRPO, weak telecom start, 44.4k calls (steps 6, 7) | 4 | 10.5–11.5 h |
+| Same, 88.8k calls (E2, step 7) | 4 | about 19 h |
+| GRPO, strong telecom start or transfer-SFT start, 44.4k calls | 4–5 | about 3.5 h |
+| Iterated RFT, telecom | 4–5 | 1.5–1.7 h |
+| GRPO, math strong, 10.4k calls | 4 | about 4 h |
+| Iterated RFT, math strong | 4 | about 1.7 h |

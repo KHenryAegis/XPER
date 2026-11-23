@@ -1,0 +1,8 @@
+{
+  "iteration": 16,
+  "failed_calls_lower_bound": 2,
+  "failed_calls_upper_bound": 416,
+  "failed_calls_exact": false,
+  "successful_rollout_calls": 10820,
+  "total_calls_conservatively_charged": 11236
+}
