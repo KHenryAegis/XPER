@@ -1,6 +1,30 @@
-# Experiment groups
+# Reproducing the XPER experiments
 
-Run the commands from the repository root after configuring the training environment in the [project README](../README.md). Run `bash experiments/run_gpu.sh` for the full sequence, or invoke one numbered script after its prerequisites. Each GPU driver writes its own rollout and evaluation records. Step 09 reads the reference records shipped in this repository and can run on its own.
+Run all commands from the repository root. The paper used one Linux node with eight NVIDIA H20 GPUs (96 GB each), Python 3.12, PyTorch 2.8.0, CUDA 12.8 and vLLM 0.11.0. Several drivers select devices 0–7 explicitly. Reserve the node for the run. The math sandbox uses Linux user namespaces and libseccomp.
+
+## Prepare the environment and inputs
+
+Use a fresh checkout and a separate checkpoint directory for each full rerun. The drivers use fixed output names for each arm and seed.
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+export XPER_PYTHON="$(command -v python)"
+export XPER_HOME=/path/to/experiment-home
+mkdir -p "$XPER_HOME/models/hf" "$XPER_HOME/models/xper" data/external/math
+python -m pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
+nvidia-smi -L
+```
+
+Place each Hugging Face checkpoint under `$XPER_HOME/models/hf/`, using its model name as the directory name. The four required checkpoints are `Qwen/Qwen3-4B-Instruct-2507`, `Qwen/Qwen3-8B`, `Qwen/Qwen3-8B-Base` and `Qwen/Qwen3-4B-Base`. Place the rStar2-Agent integer-answer math file at `data/external/math/train.jsonl` and ToolACE at `data/external/toolace.json`. Step 00 installs the pinned τ²-bench checkout, checks the inputs and initializes the Base checkpoints. Dataset checksums and model index hashes are in [data/datasets.json](../data/datasets.json).
+
+## Run on GPUs
+
+```bash
+bash experiments/run_gpu.sh
+```
+
+The launcher runs steps 00–08 in order and stops if a step fails. To run a single experiment, invoke its numbered script after completing the prerequisites below. Step 09 analyzes the bundled records separately.
 
 | Step | Script | Paper results | Hardware | Needs |
 |---|---|---|---|---|
@@ -18,6 +42,16 @@ Run the commands from the repository root after configuring the training environ
 
 Table 9 (decision guide) is read off Table 6. Figures 2(b,c) use the per-iteration mixed-group counts and held-out pass@8 minus pass@1, and Figures 1 and 3 are
 diagrams; their scripts need no data.
+
+## Read your results
+
+Each evaluation writes a SQLite store, episode JSONL and a log in `results/eval/`, `results/math/` or `results/g1/`. Training histories and checkpoints are under `results/`, `logs/queue/` and `$XPER_HOME/models/xper/`. Step 05 writes training replay coverage to `results/coverage/`. Step 07 writes validation episodes to `results/probe/`.
+
+After the final experiment, the launcher exports **your evaluation logs** to `outputs/gpu/eval_summaries.csv` and recomputes the validation probe in `outputs/gpu/table10_probe.csv` from your six probe stores. The completeness check uses the published run IDs; the scores come from your logs. For a partial run, export the completed evaluations with:
+
+```bash
+python tools/export_eval_summaries.py --root "$PWD" --out outputs/gpu/partial_evals.csv
+```
 
 ## Where each number comes from
 
@@ -76,3 +110,7 @@ over the listed seeds.
 | Iterated RFT, telecom | 4–5 | 1.5–1.7 h |
 | GRPO, math strong, 10.4k calls | 4 | about 4 h |
 | Iterated RFT, math strong | 4 | about 1.7 h |
+
+## Coverage of the bundled records
+
+The included records support independent recalculation of held-out scores. They retain episode outcomes and counts; they omit most individual tool requests and responses. Figure 2(a) can be redrawn from the included depth summaries. Rebuilding its prefix trie requires complete source and target stores. The same limitation applies to auditing every training and retry call against SQLite and recounting Python exceptions and timeouts in the strong-math discussion. The package includes the recorded charge for the failed math shard: 10,820 successful-rollout calls and an upper bound of 416 additional calls.
