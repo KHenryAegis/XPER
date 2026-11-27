@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Step 2: weak telecom target (Qwen3-8B-Base + delimiter init + one epoch of ToolACE SFT).
-#   Table 1   zero-shot of the weak start                         8b-commonsft
-#   Table 5   SFT on its own successes (1 round) / transfer SFT   8b-selfexp / 8b-xfer
+#   Table 2   zero-shot of the weak start                         8b-commonsft
+#   Table 6   SFT on its own successes (1 round) / transfer SFT   8b-selfexp / 8b-xfer
 #             iterated RFT (2 seeds) / GRPO (1 seed)              rft-commonsft-s50{1,2} / grpo-commonsft-s601
 #   (transfer ICL of this start is run with the strong start's ICL in step 3)
 # Needs steps 0-1 and data/external/toolace.json. Driver logs: results/pipeline_a/, results/<tag>.s<seed>.driver.log.

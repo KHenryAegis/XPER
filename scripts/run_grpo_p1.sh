@@ -5,7 +5,7 @@
 # advantages (zero-variance groups dropped) -> one weighted-CE pass (bc_train --weighted) from the
 # current policy -> next policy. Stops when the target has spent BUDGET env calls.
 #
-# run_grpo.sh plus the options of the alternative arms (Table 2, lower block; scripts/jobs_spec.py).
+# run_grpo.sh plus the options of the alternative arms (Table 3, lower block; scripts/jobs_spec.py).
 # Usage: START=<hf dir> TAG=<name> THINK=--no-think|"" bash scripts/run_grpo_p1.sh
 # INJECT=<source store glob>: off-policy source successes into groups (INJECT_MODE fail|all; grpo_advantages.py).
 #   INJECT_SELF=1: prefer the target's own earlier successes; SRC_TASK_FRAC: source kept for this task fraction.

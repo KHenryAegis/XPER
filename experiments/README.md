@@ -31,17 +31,17 @@ The launcher runs steps 00–08 and 10 in order and stops if a step fails. Step 
 |---|---|---|---|---|
 | 0 | `00_setup.sh` | τ²-bench checkout, input check, delimiter-initialized Base checkpoints | CPU | `data/external/` files |
 | 1 | `01_source_logs.sh` | the stored source logs (§5.2) | 8 GPUs | 0 |
-| 2 | `02_telecom_weak.sh` | Table 1 and Table 5, weak telecom start | 8 GPUs | 0, 1 |
-| 3 | `03_telecom_strong.sh` | §3.3 (GRPO from transfer SFT); Table 1 (source, strong telecom); Tables 5–6, strong telecom; transfer ICL of both telecom starts; §5.1 overlap check | 8 GPUs | 0–2 |
-| 4 | `04_math.sh` | Table 1 and Table 5, math | 8 GPUs | 0, 1 |
+| 2 | `02_telecom_weak.sh` | Table 2 and Table 6, weak telecom start | 8 GPUs | 0, 1 |
+| 3 | `03_telecom_strong.sh` | §3.3 (GRPO from transfer SFT); Table 2 (source, strong telecom); Tables 6–7, strong telecom; transfer ICL of both telecom starts; §5.1 overlap check | 8 GPUs | 0–2 |
+| 4 | `04_math.sh` | Table 2 and Table 6, math | 8 GPUs | 0, 1 |
 | 5 | `05_exact_replay.sh` | §3.1 and Figure 2(a), training tasks | CPU | 1–4 |
-| 6 | `06_injection_cohort.sh` | Table 2 (upper block), Tables 3–4, Figure 4, §6.1 controls | 8 GPUs | 0–2 |
-| 7 | `07_alternatives_probe.sh` | Table 2 (lower block), Table 7 | 8 GPUs | 0–2 |
+| 6 | `06_injection_cohort.sh` | Table 3 (upper block), Tables 4–5, Figure 4, §6.1 controls | 8 GPUs | 0–2 |
+| 7 | `07_alternatives_probe.sh` | Table 3 (lower block), Table 8 | 8 GPUs | 0–2 |
 | 8 | `08_permutation.sh` | §6.2, permutation control | 8 GPUs | 0, 1 |
 | 8 | `08_source_scaling.sh` | §7.3, source-data scaling | 4 GPUs (devices 2–5) | 0–1; full-data reference points from 3 and 8 (permutation) |
-| 10 | `10_reuse_comparisons.sh` | Table 2 (transfer SFT → GRPO row), Table 6 (mobile-data ICL row), Table 5 (Hermes-3 row), §6.1 (matched-cohort math transfer SFT) | Up to 8 GPUs | 0–2. Steps 3 and 6 supply the reference evaluations for a live comparison |
+| 10 | `10_reuse_comparisons.sh` | Table 3 (transfer SFT → GRPO row), Table 7 (mobile-data ICL row), Table 6 (Hermes-3 row), §6.1 (matched-cohort math transfer SFT) | Up to 8 GPUs | 0–2. Steps 3 and 6 supply the reference evaluations for a live comparison |
 
-The §7.1 decision rule reads off Table 5. Result files keep the table numbers of an earlier draft: `table3_*` is Table 2 and `table10_probe.csv` is Table 7. The numerical inputs to Figures 2(b,c) are in `outputs/observations.json` after CPU recomputation.
+The §7.1 decision rule reads off Table 6. Result file names follow an earlier draft's table numbers and do not always match the paper: `table10_probe.csv` holds Table 8, while `table3_*` happens to hold Table 3. The numerical inputs to Figures 2(b,c) are in `outputs/observations.json` after CPU recomputation.
 
 Step 10 accepts an individual experiment selector.
 
@@ -72,22 +72,22 @@ over the listed seeds.
 
 | Paper item | Runs |
 |---|---|
-| Table 1, telecom | `qwen3-4b-inst` (source), `8b-instruct-start-nothink` (strong), `8b-commonsft` (weak) |
-| Table 1, math | `math-4b-inst`, `math-8b-instruct`, `math-8b-base-eos` (only the weak-start pilot uses 100 problems) |
-| Table 5, telecom weak | zero-shot `8b-commonsft`; SFT `8b-selfexp`; RFT `rft-commonsft-s50{1,2}`; GRPO `grpo-commonsft-s601`; transfer SFT `8b-xfer`; ICL `8b-commonsft-icl6` |
-| Table 5, telecom strong | zero-shot `8b-instruct-start-nothink`; SFT `8b-instruct-selfexp-s40{1,2,3}-nothink`; RFT `rft-instruct-s50{1,2}`; GRPO `grpo-instruct-s60{1,2,3}`; transfer SFT `8b-instruct-xfer-s40{1,2,3}-nothink`; ICL `8b-instruct-icl6`, `-icl6-s1`, `-icl6-s2` |
-| Table 5, math weak | zero-shot `math-8b-base-eos`; SFT `math-8b-base-selfexp`; transfer SFT `math-8b-base-xfer` |
-| Table 5, math strong | zero-shot `math-8b-instruct`; SFT `math-8b-selfexp`; RFT `math-rft-instruct-s50{1,2}`; GRPO `math-grpo-instruct-s60{1,2,3}`; transfer SFT `math-8b-xfer`; ICL `math-8b-icl4` |
+| Table 2, telecom | `qwen3-4b-inst` (source), `8b-instruct-start-nothink` (strong), `8b-commonsft` (weak) |
+| Table 2, math | `math-4b-inst`, `math-8b-instruct`, `math-8b-base-eos` (only the weak-start pilot uses 100 problems) |
+| Table 6, telecom weak | zero-shot `8b-commonsft`; SFT `8b-selfexp`; RFT `rft-commonsft-s50{1,2}`; GRPO `grpo-commonsft-s601`; transfer SFT `8b-xfer`; ICL `8b-commonsft-icl6` |
+| Table 6, telecom strong | zero-shot `8b-instruct-start-nothink`; SFT `8b-instruct-selfexp-s40{1,2,3}-nothink`; RFT `rft-instruct-s50{1,2}`; GRPO `grpo-instruct-s60{1,2,3}`; transfer SFT `8b-instruct-xfer-s40{1,2,3}-nothink`; ICL `8b-instruct-icl6`, `-icl6-s1`, `-icl6-s2` |
+| Table 6, math weak | zero-shot `math-8b-base-eos`; SFT `math-8b-base-selfexp`; transfer SFT `math-8b-base-xfer` |
+| Table 6, math strong | zero-shot `math-8b-instruct`; SFT `math-8b-selfexp`; RFT `math-rft-instruct-s50{1,2}`; GRPO `math-grpo-instruct-s60{1,2,3}`; transfer SFT `math-8b-xfer`; ICL `math-8b-icl4` |
 | §6.3 text | ICL k=3 and k=12: `8b-instruct-icl3-s0`, `8b-instruct-icl12-s0`; ICL on transfer SFT: `8b-instruct-xfer-s40{1,2,3}-icl6` |
 | §3.3 (GRPO from transfer SFT) | zero-shot start: `grpo-instruct-s60{1,2,3}`; transfer-SFT start (`8b-instruct-xfer-s401`): `grpo-xferstart-s60{1,2}` |
-| Table 6 | source exploration and success splits, weak `td{0,100}-s60{1,2,3}` and the strong-telecom runs of Table 5, grouped by ticket family in `outputs/tables/table7_families.csv` after CPU recomputation |
+| Table 7 | source exploration and success splits, weak `td{0,100}-s60{1,2,3}` and the strong-telecom runs of Table 6, grouped by ticket family in `outputs/tables/table7_families.csv` after CPU recomputation |
 | §6.2, permutation control | `init-eos-{8b,4b}`, `fmtctl-{8b,4b}` (permuted), `bc3-{8b,4b}` (real) |
-| Tables 2–4, Figure 4 | `td{0,5,20,100}-s60{1,2}`, `td{0,100}-s603`, `sc-tel-{obs_mask,schema_random}-s60{1,2}`, `sc-math-{none,real}-s60{1,2,3}` |
-| Table 2 (lower), Table 7 | `e2-tel*`, `e4a-tel*`, `e4b-tel*`, `e5-tel*`, `results/probe/e3-*` |
+| Tables 3–5, Figure 4 | `td{0,5,20,100}-s60{1,2}`, `td{0,100}-s603`, `sc-tel-{obs_mask,schema_random}-s60{1,2}`, `sc-math-{none,real}-s60{1,2,3}` |
+| Table 3 (lower), Table 8 | `e2-tel*`, `e4a-tel*`, `e4b-tel*`, `e5-tel*`, `results/probe/e3-*` |
 | §7.3, source-data scaling | `8b-xfer-bare-p{25,50,75}`, `8b-base-xfer-weak-p{25,50,75,100s1}`. Full-data strong baseline uses three transfer seeds. Full-data weak baseline combines `bc3-8b` and `8b-base-xfer-weak-p100s1`. |
 | §6.1, uncapped controls | `tp-{mismatch,shuffle}-s60{1,2}` |
-| Table 2, transfer SFT → GRPO | `xs-grpo-tel-s60{1,2,3}`. The recorded start is `8b-xfer-rebuilt`. A fresh run uses the `8b-xfer` evaluation from step 02. |
-| Table 6 mobile-data ICL; Table 5 Hermes-3; §6.1 matched math | `8b-instruct-icl6-mobile-s{0,1,2}`, `hermes8b-{start,icl6,xfer}`, `sc-math-xfer` |
+| Table 3, transfer SFT → GRPO | `xs-grpo-tel-s60{1,2,3}`. The recorded start is `8b-xfer-rebuilt`. A fresh run uses the `8b-xfer` evaluation from step 02. |
+| Table 7 mobile-data ICL; Table 6 Hermes-3; §6.1 matched math | `8b-instruct-icl6-mobile-s{0,1,2}`, `hermes8b-{start,icl6,xfer}`, `sc-math-xfer` |
 
 ## Conventions
 
@@ -111,7 +111,7 @@ over the listed seeds.
   the reported tags. A fresh run of E2 seed 602 may finish; the paper reports two completed seeds.
 - **One repaired shard.** In math real-source seed 603, one final-round shard failed to persist a lone Unicode
   surrogate (§5.4). It was resampled once with the same policy and seeds by a one-off script that is not part of
-  this release; the encoding fix is in the released code (`tests/test_unicode_actions.py`), and the compact records include its call bounds. Table 2 charges the conservative 11,236 calls (†).
+  this release; the encoding fix is in the released code (`tests/test_unicode_actions.py`), and the compact records include its call bounds. Table 3 charges the conservative 11,236 calls (†).
 
 ## Measured run times (NVIDIA H20, 96 GB)
 
@@ -126,4 +126,4 @@ over the listed seeds.
 
 ## Coverage of the bundled records
 
-The included records support independent recalculation of held-out scores. The released source stores include their full simulated actions and observations. The target records retain episode outcomes and counts. Figure 2(a) can be redrawn from the included depth summaries. Rerun the relevant target rollout stages to rebuild the complete replay comparison and recount target-side retries and tool errors. The package records 10,820 successful-rollout calls and an upper bound of 416 additional calls for the failed math shard. Fresh GPU runs can vary with the hardware, kernels, and checkpoint reconstruction. The CPU command writes the Table 2–4 statistics to `outputs/tables/coldstart.csv` and the Table 7 probe to `outputs/table10_probe.csv`.
+The included records support independent recalculation of held-out scores. The released source stores include their full simulated actions and observations. The target records retain episode outcomes and counts. Figure 2(a) can be redrawn from the included depth summaries. Rerun the relevant target rollout stages to rebuild the complete replay comparison and recount target-side retries and tool errors. The package records 10,820 successful-rollout calls and an upper bound of 416 additional calls for the failed math shard. Fresh GPU runs can vary with the hardware, kernels, and checkpoint reconstruction. The CPU command writes the Table 3–5 statistics to `outputs/tables/coldstart.csv` and the Table 8 probe to `outputs/table10_probe.csv`.

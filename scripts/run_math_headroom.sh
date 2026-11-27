@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Math env G1 (headroom): zero-shot source and targets on the 300-problem test split, n=4 (Table 1).
+# Math env G1 (headroom): zero-shot source and targets on the 300-problem test split, n=4 (Table 2).
 # The source's train experience must help the target only if the target has room to improve
 # and the source solves problems the target does not.
 : "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
@@ -24,7 +24,7 @@ run() {  # gpu model-id model extra
 echo "=== $(date +%H:%M) math headroom on GPUs ${G[*]}"
 run ${G[0]} math-4b-inst $H/Qwen3-4B-Instruct-2507 "" & p1=$!
 run ${G[1]} math-8b-instruct $H/Qwen3-8B --no-think & p2=$!
-# The Base model mostly runs to the token cap; the reported run covers the first 100 test problems (Table 1).
+# The Base model mostly runs to the token cap; the reported run covers the first 100 test problems (Table 2).
 run ${G[2]} math-8b-base-eos $O/qwen3-8b-base-init-eos "--limit 100" & p3=$!
 for p in $p1 $p2 $p3; do wait $p || die "a run failed"; done
 for m in math-4b-inst math-8b-instruct math-8b-base-eos; do grep -h -E '^\{"(model|timing)' results/math/$m.log; done

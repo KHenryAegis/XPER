@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Step 3: strong telecom target (Qwen3-8B, thinking off) and transfer ICL of both telecom starts.
-#   Table 1   zero-shot of the source and the strong start          qwen3-4b-inst, qwen3-8b-nothink (results/g1/)
-#   Table 5/6 SFT on own successes / transfer SFT, 3 seeds          8b-instruct-{selfexp,xfer}-s40{1,2,3}-nothink
+#   Table 2   zero-shot of the source and the strong start          qwen3-4b-inst, qwen3-8b-nothink (results/g1/)
+#   Table 6/7 SFT on own successes / transfer SFT, 3 seeds          8b-instruct-{selfexp,xfer}-s40{1,2,3}-nothink
 #             transfer ICL k=6, 3 draws; k=3 and k=12; weak start   8b-instruct-icl6{,-s1,-s2}, -icl3-s0, -icl12-s0,
 #                                                                   8b-commonsft-icl6
 #             ICL on the transfer-SFT checkpoints                   8b-instruct-xfer-s40{1,2,3}-icl6

@@ -13,7 +13,7 @@
 | `records/failed_shard.json` | Recorded call bounds for the resampled math shard in seed 603. |
 | `splits/` | Source-explored, source-solved and held-out probe task IDs. The benchmark defines the official telecom test split. |
 | `source/{telecom,math}/4b-inst.shard*.db.gz` | The exact source stores used in the paper, including unsuccessful rollouts and their simulated actions and observations. Step 01 restores the stores while preserving their shard and trajectory order. |
-| `results/` | Reference evaluation summaries, per-round curves, per-run charges, generated cold-start tables and the reuse probe. `table3_runs.csv` records partial and retried runs. The CPU command `python scripts/reproduce.py` recomputes the Table 2–4 scores and paired comparisons in `outputs/tables/coldstart.csv`. |
+| `results/` | Reference evaluation summaries, per-round curves, per-run charges, generated cold-start tables and the reuse probe. `table3_runs.csv` records partial and retried runs. The CPU command `python scripts/reproduce.py` recomputes the Table 3–5 scores and paired comparisons in `outputs/tables/coldstart.csv`. |
 
 Telecom evaluations normally sample eight episodes per task. Math evaluations sample four. Pass@1 is the mean success rate per task. Pass@n counts tasks solved in at least one of their n attempts. Bootstrap intervals resample shared tasks and condition on the observed policies.
 
