@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Step 6: matched cold-start injection cohorts (Section 5.4, Section 6.1).
-#   Table 3 (upper), Table 4, Figure 4  telecom caps 0/5/20/100, seeds 601/602          td{0,5,20,100}.s60{1,2}
-#   Table 3, Table 5                    telecom information controls; math none/real   sc-tel-{obs_mask,schema_random}.s60{1,2},
+#   Table 2 (upper), Table 3, Figure 4  telecom caps 0/5/20/100, seeds 601/602          td{0,5,20,100}.s60{1,2}
+#   Table 2, Table 4                    telecom information controls; math none/real   sc-tel-{obs_mask,schema_random}.s60{1,2},
 #                                                                                      sc-math-{none,real}.s60{1,2}
-#   Table 3                             third rollout seed of the four main arms       td{0,100}.s603, sc-math-{none,real}.s603
+#   Table 2                             third rollout seed of the four main arms       td{0,100}.s603, sc-math-{none,real}.s603
 #   Section 6.1                         uncapped mismatch / shuffle controls           tp-{mismatch,shuffle}.s60{1,2}
 # Every arm: weak start, 80 source-solved tasks, 16 tasks x 8 samples, lr 1e-6, 44,414 (telecom) or 10,403 (math)
 # target calls, injection into all-failure groups only. Each controller writes an immutable job manifest, runs its

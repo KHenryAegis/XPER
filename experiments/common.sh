@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$ROOT"
-: "${XPER_HOME:?set XPER_HOME to the directory that holds XPER/, models/ and miniconda3/ (README, Layout)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 export XPER_HOME
 export XPER_PYTHON=${XPER_PYTHON:-$XPER_HOME/miniconda3/envs/xper/bin/python}
 source scripts/activate_xper.sh    # PYTHONPATH, TAU2_DATA_DIR, XPER_MATH_DATA

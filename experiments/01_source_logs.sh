@@ -6,6 +6,12 @@
 #            -> results/math/src/4b-inst.shard{0,1}.db  (2,000 episodes, 10,403 calls, 452 successes)
 source "$(dirname "$0")/common.sh"
 
+if [[ ${1:-} == --published && $# == 1 ]]; then
+  "$PY" -B scripts/source_records.py
+  exit 0
+fi
+if (( $# )); then echo "Usage: $0 [--published]" >&2; exit 2; fi
+
 step "telecom source log"
 mkdir -p results/src
 bash scripts/src_rollout.sh

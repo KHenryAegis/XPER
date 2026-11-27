@@ -1,6 +1,6 @@
 #!/bin/bash
 # Re-eval B2 seed models with --no-think (matching how they were trained)
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -u
 cd "$(dirname "$0")/.."
 PY=${XPER_PYTHON:-$XPER_HOME/miniconda3/envs/xper/bin/python}

@@ -2,21 +2,173 @@
 import csv
 import gzip
 import json
+import random
 from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean, stdev
 
 import numpy as np
 
-import analyze_coldstart as core
-import analyze_paper as paper
-from analyze_alternatives import NEW, alternative_rows, probe_rows, write_csv
+from source_records import published_successes
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 RECORDS = DATA / "records"
 REF = DATA / "results"
 OUT = ROOT / "outputs"
+
+
+BOOT_SEED = 20261115
+DRAWS = 20000
+
+def bootstrap_arms(arrays, draws=DRAWS, seed=BOOT_SEED):
+    """arrays[arm, seed, task]; shared task indices preserve pairing and clusters."""
+    a = np.asarray(arrays, dtype=float)
+    if a.ndim != 3 or not np.isfinite(a).all() or min(a.shape) == 0:
+        raise ValueError("expected finite arm x seed x task data")
+    per_task = a.mean(axis=1)
+    rng = np.random.default_rng(seed)
+    out = np.empty((a.shape[0], draws))
+    for start in range(0, draws, 512):
+        ids = rng.integers(0, a.shape[2], size=(min(512, draws - start), a.shape[2]))
+        out[:, start:start + len(ids)] = per_task[:, ids].mean(axis=2)
+    return out
+
+
+def ci(values):
+    return np.quantile(values, [.025, .975]).tolist()
+
+
+def write_csv(path, rows, cols):
+    with open(path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        for r in rows:
+            w.writerow({c: r.get(c, "") for c in cols})
+
+
+SEEDS = (601, 602, 603)
+A = [f"xs-grpo-tel-s{seed}" for seed in SEEDS]
+B = [f"8b-instruct-icl6-mobile-s{seed}" for seed in (0, 1, 2)]
+MIXED = ["8b-instruct-icl6", "8b-instruct-icl6-s1", "8b-instruct-icl6-s2"]
+C = {"zero-shot": "hermes8b-start", "ICL": "hermes8b-icl6", "SFT": "hermes8b-xfer"}
+MATH = ["sc-math-xfer", *(f"sc-math-real-s{seed}" for seed in SEEDS)]
+FAMILIES = {"mms_issue": 16, "mobile_data_issue": 9, "service_issue": 15}
+
+
+def comparison(rates, candidates, references, family=None):
+    names = [*candidates, *references]
+    ids = set(rates[names[0]])
+    if any(set(rates[name]) != ids for name in names):
+        raise ValueError(f"unpaired task sets for {names}")
+    if family is not None:
+        ids = {task for task in ids if task.startswith(f"[{family}]")}
+        if len(ids) != FAMILIES[family]:
+            raise ValueError(f"wrong task count for {family}")
+    ids = sorted(ids)
+    estimates = np.stack([[mean(rates[name][task] for name in names) for task in ids]
+                          for names in (candidates, references)])
+    boot = bootstrap_arms(estimates[:, None, :])
+    return dict(tasks=len(ids), candidate=float(estimates[0].mean()), reference=float(estimates[1].mean()),
+                delta=float((estimates[0] - estimates[1]).mean()), paired_95_ci=ci(boot[0] - boot[1]))
+
+
+def write_summary(out, rates, stats, rounds, metadata, start):
+    refs = [f"td100-s{seed}" for seed in SEEDS]
+    cap0 = [f"td0-s{seed}" for seed in SEEDS]
+    run_stats = []
+    for name, control in zip(A, cap0):
+        history = rounds[name]
+        calls = history[-1]["env_calls"]
+        if calls < 44414 or (len(history) > 1 and history[-2]["env_calls"] >= 44414):
+            raise ValueError(f"wrong budget boundary for {name}")
+        if any(row["injected"] for row in history):
+            raise ValueError(f"unexpected injection for {name}")
+        for rows in (history, rounds[control]):
+            if any(row["all_success_groups"] + row["all_fail_groups"] + row["mixed_groups"] != row["groups"]
+                   for row in rows):
+                raise ValueError(f"inconsistent group counts for {name} or {control}")
+        run_stats.append(dict(run=name, eval=stats[name], target_calls=calls, rounds=len(history),
+                              grpo_supervised_tokens=sum(row["supervised_tokens"] for row in history),
+                              mean_mixed_groups=mean(row["mixed_groups"] for row in history),
+                              matched_no_injection_mean_mixed_groups=mean(row["mixed_groups"] for row in rounds[control])))
+    offline_tokens = metadata["transfer_sft"][start]["supervised_tokens"]
+    start_rate = mean(rates[start].values())
+    source_rate = mean(rates["qwen3-4b-inst"].values())
+    zero = C["zero-shot"]
+    scores = {arm: mean(rates[name].values()) for arm, name in C.items()}
+    predicted = "SFT" if stats[zero][2] >= 20 else "ICL" if scores["zero-shot"] < source_rate else "zero-shot"
+    result = {
+        "A": dict(start_pass1=start_rate, runs=run_stats, seed_sd_pct=stdev(stats[name][0] for name in A),
+                  vs_injection=comparison(rates, A, refs), vs_no_injection=comparison(rates, A, cap0),
+                  vs_offline_start=comparison(rates, A, [start]), transfer_sft_tokens_per_pass=offline_tokens,
+                  mean_two_pass_sft_plus_grpo_tokens=2 * offline_tokens + mean(r["grpo_supervised_tokens"] for r in run_stats),
+                  mean_injection_supervised_tokens=mean(metadata["capped_injection_supervised_tokens"].values())),
+        "B": dict(overall=comparison(rates, B, MIXED),
+                  families={f: comparison(rates, B, MIXED, family=f) for f in FAMILIES},
+                  evaluations={name: stats[name] for name in B}),
+        "C": dict(evaluations={arm: stats[name] for arm, name in C.items()}, predicted=predicted,
+                  best_point_estimate=[arm for arm, score in scores.items() if score == max(scores.values())],
+                  icl_vs_zero=comparison(rates, [C["ICL"]], [zero]),
+                  sft_vs_zero=comparison(rates, [C["SFT"]], [zero]),
+                  icl_vs_sft=comparison(rates, [C["ICL"]], [C["SFT"]])),
+        "math": dict(transfer_sft_vs_injection=comparison(rates, MATH[:1], MATH[1:]),
+                     transfer_sft_training_target_calls=0),
+        "protocol_metadata": metadata,
+    }
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, indent=2) + "\n")
+    print(f"Wrote the reuse comparisons to {out}")
+
+
+FMT_THRESHOLD = 0.20  # fixed before the validation results were read
+TEST_BEST = {"telecom weak": "transfer SFT", "telecom strong": "transfer ICL",
+             "math weak": "transfer SFT", "math strong": "no reuse"}
+
+
+def decide(tgt, src):
+    """tgt/src: lists of episodes; the paper's rule with the pre-registered format threshold."""
+    bad = sum(e[2] for e in tgt) / max(1, sum(e[1] + e[2] for e in tgt))
+    if bad >= FMT_THRESHOLD:
+        return "transfer SFT"
+    rate = lambda eps: sum(e[0] for e in eps) / len(eps)
+    return "transfer ICL" if rate(tgt) < rate(src) else "no reuse"
+
+
+def probe_rows(episodes, draws=2000):
+    rows, extra = [], {}
+    for env in ("telecom", "math"):
+        S = episodes(f"e3-{'tel' if env == 'telecom' else 'math'}-src")
+        for start in ("weak", "strong"):
+            T = episodes(f"e3-{'tel' if env == 'telecom' else 'math'}-{start}")
+            tasks = sorted(T)
+            assert sorted(S) == tasks and len(tasks) == 40 and all(len(T[t]) == len(S[t]) == 4 for t in tasks)
+            allT, allS = [e for t in tasks for e in T[t]], [e for t in tasks for e in S[t]]
+            full = decide(allT, allS)
+            rate = lambda eps: sum(e[0] for e in eps) / len(eps)
+            setting = f"{env} {start}"
+            row = dict(setting=setting, validation_gap=round(100 * (rate(allT) - rate(allS)), 2),
+                       format_error_rate=round(sum(e[2] for e in allT) / sum(e[1] + e[2] for e in allT), 4),
+                       decision=full, matches_test_best=full == TEST_BEST[setting],
+                       target_calls=sum(e[3] for e in allT), source_calls=sum(e[3] for e in allS),
+                       validation_task_ids_file="data/splits/val_probe_tasks.json")
+            rng = random.Random(BOOT_SEED)
+            extra[setting] = {"test_best": TEST_BEST[setting], "target_pass1": round(100 * rate(allT), 2),
+                              "source_pass1": round(100 * rate(allS), 2)}
+            for k in (1, 2, 4):
+                # tab:probe method: k of the 4 episodes per task (both models, without replacement), tasks fixed
+                agree = sum(decide([e for t in tasks for e in rng.sample(T[t], k)],
+                                   [e for t in tasks for e in rng.sample(S[t], k)]) == full for _ in range(draws))
+                row[f"agree_k{k}"] = round(agree / draws, 4)
+                # stricter variant (summary only): tasks resampled with replacement as well
+                agree = 0
+                for _ in range(draws):
+                    drawn = [rng.choice(tasks) for _ in tasks]
+                    agree += decide([e for t in drawn for e in rng.sample(T[t], k)],
+                                    [e for t in drawn for e in rng.sample(S[t], k)]) == full
+                extra[setting][f"agree_task_bootstrap_k{k}"] = round(agree / draws, 4)
+            rows.append(row)
+    return rows, extra
 
 
 def episodes(group, run, tasks, samples):
@@ -140,7 +292,7 @@ def tables(stats, rounds):
 
 def families(rates):
     split = json.loads((DATA / "splits/telecom_extra_splits.json").read_text())
-    solved = [json.loads(l)["task_id"] for l in (DATA / "source/source_successes_telecom.jsonl").read_text().splitlines()]
+    solved = published_successes("telecom")
     tasks = set(rates["qwen3-4b-inst"])
     labels = {"mms_issue":"MMS","mobile_data_issue":"Mobile data","service_issue":"Service"}
     def family(t):
@@ -152,7 +304,8 @@ def families(rates):
                        ("Successful source trajectories",solved),("Held-out test tasks",tasks)]:
         rows.append({"row":label,**Counter(family(t) for t in ids)})
     for label, names in [("Weak target, no injection",seeds("td0",RL)),("Weak target, capped injection",seeds("td100",RL)),
-                         ("Source, zero-shot",["qwen3-4b-inst"]),*zip(METHODS,STRONG)]:
+                         ("Source, zero-shot",["qwen3-4b-inst"]),*zip(METHODS,STRONG),
+                         ("Transfer ICL (mobile-data only)", B)]:
         if any(set(rates[r]) != tasks for r in names):
             raise ValueError(f"{label}: test tasks differ")
         places = 2 if label.startswith("Weak") else 1
@@ -165,88 +318,73 @@ def families(rates):
         ids = sorted(t for t in tasks if family(t) == name)
         arms = np.array([[[100 * rates[run][t] for t in ids] for run in strong_runs[method]]
                          for method in ("Transfer ICL", "GRPO")])
-        icl, grpo = core.bootstrap_arms(arms)
-        low, high = core.ci(icl - grpo)
+        icl, grpo = bootstrap_arms(arms)
+        low, high = ci(icl - grpo)
         contrast[name] = f"{arms[0].mean() - arms[1].mean():+.1f}"
         interval[name] = f"[{low:+.1f}, {high:+.1f}]"
     rows.extend([contrast, interval])
     write_table("table7_families", rows, ["row", *labels.values()])
 
 
-def injection(rates, rounds):
-    arrays, arms, matched = {}, {}, {}
-    accounting = json.loads((RECORDS / "failed_shard.json").read_text())
-    sets = {}
-    for key, (env,label,tag) in core.ARMS.items():
-        runs, vals = [], []
-        for seed in RL if key in paper.MAIN else (601,602):
-            name = f"{tag}-s{seed}"
-            ids = sorted(rates[name])
-            if sets.setdefault(env,ids) != ids:
-                raise ValueError(f"{name}: unpaired task set")
-            v = np.array([rates[name][t] for t in ids])
-            vals.append(v)
-            h = rounds[name]
-            run = dict(pass1=float(v.mean()), passk=float((v>0).mean()), history=h,
-                       source_injections=sum(x["injected"] for x in h), target_calls=h[-1]["env_calls"])
-            if name=="sc-math-real-s603":
-                if run["target_calls"] != accounting["successful_rollout_calls"]:
-                    raise ValueError("failed-shard accounting does not match round records")
-                run.update(budget_accounting=accounting,target_calls_charged=accounting["total_calls_conservatively_charged"])
-            runs.append(run)
-        arrays[key] = np.array(vals)
-        arms[key] = dict(environment=env,label=label,runs=runs,**paper.summarize(runs))
-        matched[key] = paper.summarize(runs[:2])
+def coldstart(rates, stats, rounds, metadata, run_charges):
+    """Match each comparison to the same completed rollout seeds on both arms."""
+    failed = json.loads((RECORDS / "failed_shard.json").read_text())
+    rows = []
 
-    def compare(key, ref, n):
-        a,b = arrays[key][:n],arrays[ref][:n]
-        boot = core.bootstrap_arms(np.stack([a,b]))
-        return dict(mean_difference=float((a-b).mean()),task_bootstrap_ci95=core.ci(boot[0]-boot[1]))
-    main = {env:compare(prefix+"_real",prefix+"_none",3) for env,prefix in [("telecom","tel"),("math","math")]}
-    controls = {k+"_vs_tel_none":compare(k,"tel_none",2) for k in ("tel_real","tel_mask","tel_schema")}
-    data = dict(arms=arms, main_comparisons=main, matched_two_seed=dict(arms=matched,comparisons=controls))
-    paper.write_tables(data)
-    paper.plot(data)
+    def add(table, label, names, references=(), experiment=None):
+        scores = [stats[name] for name in names]
+        row = dict(table=table, arm=label, runs=" / ".join(names),
+                   pass1_pct=mean(s[0] for s in scores), sd_pct=stdev(s[0] for s in scores),
+                   passn_pct=mean(s[1] for s in scores), per_seed_pass1_pct=[s[0] for s in scores])
+        if references:
+            result = comparison(rates, names, references)
+            row.update(delta_pp=100 * result["delta"],
+                       ci95_pp=[100 * bound for bound in result["paired_95_ci"]])
+        if experiment:
+            charges = [r for r in run_charges if r["exp_id"] == experiment]
+            if [int(r["seed"]) for r in charges] != list(RL):
+                raise ValueError(f"incomplete charge records for {experiment}")
+            row.update(charge_seeds=[int(r["seed"]) for r in charges],
+                       target_calls=[int(r["target_calls_charged"]) for r in charges],
+                       exposures=[int(r["injections_or_exposures"]) for r in charges])
+        else:
+            calls = [rounds[name][-1]["env_calls"] for name in names]
+            if "sc-math-real-s603" in names:
+                i = names.index("sc-math-real-s603")
+                if calls[i] != failed["successful_rollout_calls"]:
+                    raise ValueError("failed shard disagrees with recorded charges")
+                calls[i] = failed["total_calls_conservatively_charged"]
+            exposures = [sum(r["injected"] for r in rounds[name]) for name in names]
+            if names == A:
+                sft = metadata["transfer_sft"]["8b-xfer-rebuilt"]
+                exposures = [int(sft["epochs"] * sft["trajectories"])] * len(names)
+            row.update(charge_seeds=[int(name.rsplit("-s", 1)[1]) for name in names],
+                       target_calls=calls, exposures=exposures)
+        rows.append(row)
 
-
-def export_task_counts(rates):
-    """Export the Table 3 task counts from the same episodes used for scoring."""
-    runs = [("REF", env, label, seed, f"{tag}-s{seed}")
-            for key, (env, label, tag) in core.ARMS.items() if key in paper.MAIN
-            for seed in RL]
-    for exp, label, _, spec in NEW:
-        runs.extend((exp, "telecom", label, seed, run)
-                    for seed, (run, status, _) in spec.items() if status != "partial")
-    fields = ["exp_id", "env", "arm", "seed", "task_id", "n_success", "n_samples"]
-    with (OUT / "table3_per_task.csv").open("w", newline="") as stream:
-        writer = csv.writer(stream)
-        writer.writerow(fields)
-        for exp, env, label, seed, run in runs:
-            samples = 8 if env == "telecom" else 4
-            for task, rate in rates[run].items():
-                writer.writerow([exp, env, label, seed, task, round(rate * samples), samples])
-
-
-def alternatives(rates, stats):
-    def ordered(name):
-        tasks = sorted(rates[name])
-        return tasks, np.array([rates[name][t] for t in tasks])
-    refs = {(key, seed):ordered(f"{tag}-s{seed}") for key,tag in [("tel_none","td0"),("tel_real","td100")]
-            for seed in RL}
-    names = {(exp,seed):name for exp,_,_,spec in NEW for seed,(name,status,_) in spec.items() if status != "partial"}
-    values = {k:ordered(v) for k,v in names.items()}
-    if any(ids != refs["tel_real",601][0] for ids,_ in values.values()):
-        raise ValueError("unpaired tasks across alternative arms")
-    with (REF / "table3_runs.csv").open() as f:
-        runs = [r for r in csv.DictReader(f) if r["exp_id"] != "REF"]
-    for r in runs:
-        r["seed"] = int(r["seed"])
-        for field in ("target_calls_charged","injections_or_exposures"):
-            r[field] = int(r[field])
-        key = (r["exp_id"],r["seed"])
-        if key in names:
-            r["test_pass1"], r["test_passn"] = [round(x,4) for x in stats[names[key]][:2]]
-    alternative_rows(OUT,runs,refs,values)
+    for env, base, real in [("Telecom", "td0", "td100"), ("Math", "sc-math-none", "sc-math-real")]:
+        controls = seeds(base, RL)
+        add(2, env + " no injection", controls)
+        add(2, env + " real source", seeds(real, RL), controls)
+    # The double-budget comparison excludes the unfinished seed 602 on both arms.
+    add(2, "No injection, 88.8k", ["e2-tel-r3-s601", "e2-tel-s603"], seeds("td100", (601, 603)), experiment="E2")
+    for label, names, experiment in [
+        ("Transfer SFT then GRPO", A, None),
+        ("LUFFY-style", ["e4b-tel-r2-s601", "e4b-tel-s602", "e4b-tel-r2-s603"], "E4b"),
+        ("ReLIFT-style", ["e4a-tel-s601", "e4a-tel-r2-s602", "e4a-tel-s603"], "E4a"),
+        ("Self-replay", ["e5-tel-s601", "e5-tel-r2-s602", "e5-tel-r2-s603"], "E5"),
+    ]:
+        add(2, label, names, seeds("td100", RL), experiment)
+    two = (601, 602)
+    for cap in (0, 5, 20, 100):
+        add(3, f"Cap {cap}", seeds(f"td{cap}", two))
+    controls = seeds("td0", two)
+    add(4, "No injection", controls)
+    for label, prefix in [("Real source", "td100"), ("Masked observations", "sc-tel-obs_mask"),
+                          ("Random schema", "sc-tel-schema_random")]:
+        add(4, label, seeds(prefix, two), controls)
+    write_table("coldstart", rows, ["table", "arm", "runs", "pass1_pct", "sd_pct", "passn_pct",
+                                    "per_seed_pass1_pct", "delta_pp", "ci95_pp", "charge_seeds", "target_calls", "exposures"])
 
 
 def overlap(rates):
@@ -270,9 +408,17 @@ def main():
         rounds = json.load(f)
     tables(stats,rounds)
     families(rates)
-    export_task_counts(rates)
-    injection(rates,rounds)
-    alternatives(rates,stats)
+    reuse_metadata = json.loads((RECORDS / "reuse_comparisons.json").read_text())
+    with (REF / "table3_runs.csv").open() as f:
+        run_charges = list(csv.DictReader(f))
+    coldstart(rates, stats, rounds, reuse_metadata, run_charges)
+    reuse_metadata["capped_injection_supervised_tokens"] = {
+        f"td100-s{row['seed']}": int(row["supervised_tokens_completed"])
+        for row in run_charges
+        if (row["exp_id"], row["env"], row["arm"]) == ("REF", "telecom", "Real source")
+    }
+    write_summary(OUT / "reuse_comparisons.json", rates, stats, rounds, reuse_metadata,
+                                start="8b-xfer-rebuilt")
     overlap(rates)
     split = json.loads((DATA / "splits/val_probe_tasks.json").read_text())
 

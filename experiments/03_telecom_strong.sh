@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Step 3: strong telecom target (Qwen3-8B, thinking off) and transfer ICL of both telecom starts.
-#   Table 2   zero-shot of the source and the strong start          qwen3-4b-inst, qwen3-8b-nothink (results/g1/)
-#   Table 6/7 SFT on own successes / transfer SFT, 3 seeds          8b-instruct-{selfexp,xfer}-s40{1,2,3}-nothink
+#   Table 1   zero-shot of the source and the strong start          qwen3-4b-inst, qwen3-8b-nothink (results/g1/)
+#   Table 5/6 SFT on own successes / transfer SFT, 3 seeds          8b-instruct-{selfexp,xfer}-s40{1,2,3}-nothink
 #             transfer ICL k=6, 3 draws; k=3 and k=12; weak start   8b-instruct-icl6{,-s1,-s2}, -icl3-s0, -icl12-s0,
 #                                                                   8b-commonsft-icl6
 #             ICL on the transfer-SFT checkpoints                   8b-instruct-xfer-s40{1,2,3}-icl6
 #             iterated RFT (2 seeds) / GRPO (3 seeds)               rft-instruct-s50{1,2} / grpo-instruct-s60{1,2,3}
-#   Table 1   GRPO from the transfer-SFT checkpoint (2 seeds)       grpo-xferstart-s60{1,2}
+#   §3.3      GRPO from the transfer-SFT checkpoint (2 seeds)       grpo-xferstart-s60{1,2}
 #   Sec. 5.1  no test fault combination in the training pool, the source successes or any ICL draw
 # Needs steps 0-2 (the weak-start ICL arm reads models/xper/8b-commonsft).
 source "$(dirname "$0")/common.sh"
@@ -36,7 +36,7 @@ first=$!
 rft 502 "$HALF_B" 29900 &
 wait_all "$first" "$!"
 
-step "GRPO from the zero-shot start (seeds 601-603) and from transfer SFT (Table 1, seeds 601-602)"
+step "GRPO from the zero-shot start (seeds 601-603) and from transfer SFT (§3.3, seeds 601-602)"
 # The paper started from the best transfer-SFT seed, s401 (38.4% pass@1); set XFER_START for another run.
 XFER_START=${XFER_START:-$O/8b-instruct-xfer-s401/final}
 grpo() {  # tag start seed gpus port

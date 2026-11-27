@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Do SFT transfer and ICL stack? Evaluate the B2-seeds transfer checkpoints with the same k=6
 # ICL block (seed 0) used for the 8B-Instruct ICL baseline.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

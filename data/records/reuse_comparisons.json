@@ -1,0 +1,99 @@
+{
+  "transfer_sft": {
+    "8b-xfer-rebuilt": {
+      "trajectories": 223,
+      "tasks": 80,
+      "epochs": 2.0,
+      "supervised_tokens": 80434,
+      "truncated": 0
+    },
+    "hermes8b-xfer": {
+      "trajectories": 223,
+      "tasks": 80,
+      "epochs": 2.0,
+      "supervised_tokens": 78118,
+      "truncated": 0
+    },
+    "sc-math-xfer": {
+      "trajectories": 452,
+      "tasks": 452,
+      "epochs": 2.0,
+      "supervised_tokens": 519027,
+      "truncated": 0
+    }
+  },
+  "mobile_icl": {
+    "0": {
+      "examples": 6,
+      "task_ids": [
+        "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+        "[mobile_data_issue]bad_network_preference|data_mode_off[PERSONA:Easy]",
+        "[mobile_data_issue]data_mode_off[PERSONA:None]",
+        "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+        "[mobile_data_issue]bad_network_preference|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+        "[mobile_data_issue]bad_network_preference[PERSONA:Hard]"
+      ],
+      "example_tokens": 4235,
+      "initial_prompt_min": 13554,
+      "initial_prompt_max": 13589,
+      "context_limit": 32768
+    },
+    "1": {
+      "examples": 6,
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]",
+        "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+        "[mobile_data_issue]bad_network_preference|bad_vpn[PERSONA:None]",
+        "[mobile_data_issue]data_mode_off|user_abroad_roaming_enabled_off[PERSONA:None]",
+        "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+        "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]"
+      ],
+      "example_tokens": 4950,
+      "initial_prompt_min": 14269,
+      "initial_prompt_max": 14304,
+      "context_limit": 32768
+    },
+    "2": {
+      "examples": 6,
+      "task_ids": [
+        "[mobile_data_issue]airplane_mode_on|data_saver_mode_on[PERSONA:Easy]",
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off[PERSONA:None]",
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+        "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:None]",
+        "[mobile_data_issue]bad_network_preference|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Hard]"
+      ],
+      "example_tokens": 5304,
+      "initial_prompt_min": 14623,
+      "initial_prompt_max": 14658,
+      "context_limit": 32768
+    }
+  },
+  "hermes_prompt": {
+    "delimiters": {
+      "<|im_start|>": 128039,
+      "<|im_end|>": 128040
+    },
+    "eos_token_id": 128040,
+    "context_limit": 32768,
+    "example_tokens": 6011,
+    "initial_prompt_tokens": {
+      "zero-shot": {
+        "min": 9312,
+        "max": 9347
+      },
+      "ICL": {
+        "min": 15322,
+        "max": 15357
+      }
+    },
+    "example_tasks": [
+      "[mms_issue]bad_network_preference|break_app_storage_permission|data_mode_off|unseat_sim_card[PERSONA:Hard]",
+      "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "[mms_issue]airplane_mode_on|break_app_storage_permission|data_mode_off|unseat_sim_card[PERSONA:Hard]",
+      "[mobile_data_issue]bad_network_preference|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "[service_issue]break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]"
+    ]
+  }
+}

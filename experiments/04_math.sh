@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Step 4: math with a Python tool, both targets.
-#   Table 2   zero-shot of the source and both starts              math-4b-inst, math-8b-instruct, math-8b-base-eos
-#   Table 6   strong: SFT on own successes / transfer SFT / ICL    math-8b-selfexp / math-8b-xfer / math-8b-icl4
+#   Table 1   zero-shot of the source and both starts              math-4b-inst, math-8b-instruct, math-8b-base-eos
+#   Table 5   strong: SFT on own successes / transfer SFT / ICL    math-8b-selfexp / math-8b-xfer / math-8b-icl4
 #             weak:   SFT on own successes / transfer SFT          math-8b-base-selfexp / math-8b-base-xfer
 #             strong: iterated RFT (2 seeds) / GRPO (3 seeds)      math-rft-instruct-s50{1,2} / math-grpo-instruct-s60{1,2,3}
 # Needs steps 0-1 and data/external/math/train.jsonl. Evaluation logs: results/math/ and results/eval/.

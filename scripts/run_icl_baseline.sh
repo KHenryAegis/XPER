@@ -3,7 +3,7 @@
 # no extra env calls beyond evaluation. Same examples (k, seed) across starts.
 #   GPU 6: 8B-Instruct thinking-off (strong start, B2: 24.4% zero-shot)
 #   GPU 7: Pipeline A weak start (common-SFT 8B-Base, 0% zero-shot)
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

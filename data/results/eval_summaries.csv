@@ -1,94 +1,105 @@
 paper_item,run,log,split,tasks,samples,pass1_pct,passn_pct,mixed_tasks,env_calls,mean_steps,format_error_pct
-Table 2 (zero-shot starts),8b-commonsft,results/eval/8b-commonsft.log,test,40,8,0.0,0.0,0,1040,3.25,46.61
-Table 2 (zero-shot starts),8b-instruct-start-nothink,results/eval/8b-instruct-start-nothink.log,test,40,8,24.37,47.5,15,6481,20.25,0.45
-Table 2 (zero-shot starts),math-4b-inst,results/math/math-4b-inst.log,test,300,4,22.25,53.67,154,6730,5.61,22.07
-Table 2 (zero-shot starts),math-8b-base-eos,results/math/math-8b-base-eos.log,test,100,4,0.75,3.0,3,1126,2.81,42.08
-Table 2 (zero-shot starts),math-8b-instruct,results/math/math-8b-instruct.log,test,300,4,34.83,60.0,141,6526,5.44,4.99
-Table 2 (zero-shot starts),qwen3-4b-inst,results/g1/qwen3-4b-inst.log,test,40,8,32.5,45.0,12,5637,17.62,8.49
-Table 2 (zero-shot starts),qwen3-8b-nothink,results/g1/qwen3-8b-nothink.log,test,40,8,24.69,47.5,15,6449,20.15,0.28
-Table 3 / Figure 4 (cold-start injection),sc-math-headroom,results/eval/sc-math-headroom.log,test,300,4,0.92,3.33,10,3698,3.08,39.41
-Table 3 / Figure 4 (cold-start injection),sc-math-none-s601,results/eval/sc-math-none-s601.log,test,300,4,2.17,8.33,25,4382,3.65,31.25
-Table 3 / Figure 4 (cold-start injection),sc-math-none-s602,results/eval/sc-math-none-s602.log,test,300,4,2.92,10.0,30,4912,4.09,27.7
-Table 3 / Figure 4 (cold-start injection),sc-math-none-s603,results/eval/sc-math-none-s603.log,test,300,4,2.75,10.33,31,4999,4.17,27.53
-Table 3 / Figure 4 (cold-start injection),sc-math-real-s601,results/eval/sc-math-real-s601.log,test,300,4,15.83,43.33,129,6124,5.1,10.91
-Table 3 / Figure 4 (cold-start injection),sc-math-real-s602,results/eval/sc-math-real-s602.log,test,300,4,23.17,52.67,151,6201,5.17,9.97
-Table 3 / Figure 4 (cold-start injection),sc-math-real-s603,results/eval/sc-math-real-s603.log,test,300,4,19.75,48.33,140,7521,6.27,8.97
-Table 3 / Figure 4 (cold-start injection),td0-s601,results/eval/td0-s601.log,test,40,8,0.31,2.5,1,1793,5.6,32.06
-Table 3 / Figure 4 (cold-start injection),td0-s602,results/eval/td0-s602.log,test,40,8,0.0,0.0,0,1842,5.76,31.27
-Table 3 / Figure 4 (cold-start injection),td0-s603,results/eval/td0-s603.log,test,40,8,0.0,0.0,0,1997,6.24,28.88
-Table 3 / Figure 4 (cold-start injection),td100-s601,results/eval/td100-s601.log,test,40,8,44.69,52.5,16,5163,16.13,1.62
-Table 3 / Figure 4 (cold-start injection),td100-s602,results/eval/td100-s602.log,test,40,8,43.13,52.5,15,4852,15.16,1.54
-Table 3 / Figure 4 (cold-start injection),td100-s603,results/eval/td100-s603.log,test,40,8,42.5,55.0,18,5287,16.52,1.56
-Table 3 lower block (alternatives),e2-tel-r3-s601,results/eval/e2-tel-r3-s601.log,test,40,8,0.0,0.0,0,2685,8.39,22.08
-Table 3 lower block (alternatives),e2-tel-s603,results/eval/e2-tel-s603.log,test,40,8,0.0,0.0,0,2655,8.3,22.48
-Table 3 lower block (alternatives),e4a-tel-r2-s602,results/eval/e4a-tel-r2-s602.log,test,40,8,0.0,0.0,0,1800,5.62,31.53
-Table 3 lower block (alternatives),e4a-tel-s601,results/eval/e4a-tel-s601.log,test,40,8,0.0,0.0,0,1658,5.18,33.81
-Table 3 lower block (alternatives),e4a-tel-s603,results/eval/e4a-tel-s603.log,test,40,8,0.0,0.0,0,1814,5.67,31.7
-Table 3 lower block (alternatives),e4b-tel-r2-s601,results/eval/e4b-tel-r2-s601.log,test,40,8,32.5,47.5,16,4446,13.89,13.52
-Table 3 lower block (alternatives),e4b-tel-r2-s603,results/eval/e4b-tel-r2-s603.log,test,40,8,32.81,50.0,20,6025,18.83,6.33
-Table 3 lower block (alternatives),e4b-tel-s602,results/eval/e4b-tel-s602.log,test,40,8,31.25,47.5,18,5297,16.55,5.96
-Table 3 lower block (alternatives),e5-tel-r2-s602,results/eval/e5-tel-r2-s602.log,test,40,8,9.38,32.5,13,1961,6.13,31.07
-Table 3 lower block (alternatives),e5-tel-r2-s603,results/eval/e5-tel-r2-s603.log,test,40,8,3.75,20.0,8,3054,9.54,19.18
-Table 3 lower block (alternatives),e5-tel-s601,results/eval/e5-tel-s601.log,test,40,8,1.56,10.0,4,3111,9.72,19.34
-Tables 4-5 (dose and information controls),sc-tel-obs_mask-s601,results/eval/sc-tel-obs_mask-s601.log,test,40,8,17.81,37.5,15,3172,9.91,18.65
-Tables 4-5 (dose and information controls),sc-tel-obs_mask-s602,results/eval/sc-tel-obs_mask-s602.log,test,40,8,31.56,42.5,14,3294,10.29,18.45
-Tables 4-5 (dose and information controls),sc-tel-schema_random-s601,results/eval/sc-tel-schema_random-s601.log,test,40,8,19.06,30.0,12,2314,7.23,25.76
-Tables 4-5 (dose and information controls),sc-tel-schema_random-s602,results/eval/sc-tel-schema_random-s602.log,test,40,8,22.81,32.5,12,2231,6.97,25.51
-Tables 4-5 (dose and information controls),td20-s601,results/eval/td20-s601.log,test,40,8,2.5,20.0,8,4557,14.24,9.33
-Tables 4-5 (dose and information controls),td20-s602,results/eval/td20-s602.log,test,40,8,0.0,0.0,0,3267,10.21,16.42
-Tables 4-5 (dose and information controls),td5-s601,results/eval/td5-s601.log,test,40,8,0.0,0.0,0,2171,6.78,26.8
-Tables 4-5 (dose and information controls),td5-s602,results/eval/td5-s602.log,test,40,8,0.0,0.0,0,2297,7.18,25.47
+Table 1 (zero-shot starts),8b-commonsft,results/eval/8b-commonsft.log,test,40,8,0.0,0.0,0,1040,3.25,46.61
+Table 1 (zero-shot starts),8b-instruct-start-nothink,results/eval/8b-instruct-start-nothink.log,test,40,8,24.37,47.5,15,6481,20.25,0.45
+Table 1 (zero-shot starts),math-4b-inst,results/math/math-4b-inst.log,test,300,4,22.25,53.67,154,6730,5.61,22.07
+Table 1 (zero-shot starts),math-8b-base-eos,results/math/math-8b-base-eos.log,test,100,4,0.75,3.0,3,1126,2.81,42.08
+Table 1 (zero-shot starts),math-8b-instruct,results/math/math-8b-instruct.log,test,300,4,34.83,60.0,141,6526,5.44,4.99
+Table 1 (zero-shot starts),qwen3-4b-inst,results/g1/qwen3-4b-inst.log,test,40,8,32.5,45.0,12,5637,17.62,8.49
+Table 1 (zero-shot starts),qwen3-8b-nothink,results/g1/qwen3-8b-nothink.log,test,40,8,24.69,47.5,15,6449,20.15,0.28
+Table 2 / Figure 4 (cold-start injection),sc-math-headroom,results/eval/sc-math-headroom.log,test,300,4,0.92,3.33,10,3698,3.08,39.41
+Table 2 / Figure 4 (cold-start injection),sc-math-none-s601,results/eval/sc-math-none-s601.log,test,300,4,2.17,8.33,25,4382,3.65,31.25
+Table 2 / Figure 4 (cold-start injection),sc-math-none-s602,results/eval/sc-math-none-s602.log,test,300,4,2.92,10.0,30,4912,4.09,27.7
+Table 2 / Figure 4 (cold-start injection),sc-math-none-s603,results/eval/sc-math-none-s603.log,test,300,4,2.75,10.33,31,4999,4.17,27.53
+Table 2 / Figure 4 (cold-start injection),sc-math-real-s601,results/eval/sc-math-real-s601.log,test,300,4,15.83,43.33,129,6124,5.1,10.91
+Table 2 / Figure 4 (cold-start injection),sc-math-real-s602,results/eval/sc-math-real-s602.log,test,300,4,23.17,52.67,151,6201,5.17,9.97
+Table 2 / Figure 4 (cold-start injection),sc-math-real-s603,results/eval/sc-math-real-s603.log,test,300,4,19.75,48.33,140,7521,6.27,8.97
+Table 2 / Figure 4 (cold-start injection),td0-s601,results/eval/td0-s601.log,test,40,8,0.31,2.5,1,1793,5.6,32.06
+Table 2 / Figure 4 (cold-start injection),td0-s602,results/eval/td0-s602.log,test,40,8,0.0,0.0,0,1842,5.76,31.27
+Table 2 / Figure 4 (cold-start injection),td0-s603,results/eval/td0-s603.log,test,40,8,0.0,0.0,0,1997,6.24,28.88
+Table 2 / Figure 4 (cold-start injection),td100-s601,results/eval/td100-s601.log,test,40,8,44.69,52.5,16,5163,16.13,1.62
+Table 2 / Figure 4 (cold-start injection),td100-s602,results/eval/td100-s602.log,test,40,8,43.13,52.5,15,4852,15.16,1.54
+Table 2 / Figure 4 (cold-start injection),td100-s603,results/eval/td100-s603.log,test,40,8,42.5,55.0,18,5287,16.52,1.56
+Table 2 lower block (alternatives),e2-tel-r3-s601,results/eval/e2-tel-r3-s601.log,test,40,8,0.0,0.0,0,2685,8.39,22.08
+Table 2 lower block (alternatives),e2-tel-s603,results/eval/e2-tel-s603.log,test,40,8,0.0,0.0,0,2655,8.3,22.48
+Table 2 lower block (alternatives),e4a-tel-r2-s602,results/eval/e4a-tel-r2-s602.log,test,40,8,0.0,0.0,0,1800,5.62,31.53
+Table 2 lower block (alternatives),e4a-tel-s601,results/eval/e4a-tel-s601.log,test,40,8,0.0,0.0,0,1658,5.18,33.81
+Table 2 lower block (alternatives),e4a-tel-s603,results/eval/e4a-tel-s603.log,test,40,8,0.0,0.0,0,1814,5.67,31.7
+Table 2 lower block (alternatives),e4b-tel-r2-s601,results/eval/e4b-tel-r2-s601.log,test,40,8,32.5,47.5,16,4446,13.89,13.52
+Table 2 lower block (alternatives),e4b-tel-r2-s603,results/eval/e4b-tel-r2-s603.log,test,40,8,32.81,50.0,20,6025,18.83,6.33
+Table 2 lower block (alternatives),e4b-tel-s602,results/eval/e4b-tel-s602.log,test,40,8,31.25,47.5,18,5297,16.55,5.96
+Table 2 lower block (alternatives),e5-tel-r2-s602,results/eval/e5-tel-r2-s602.log,test,40,8,9.38,32.5,13,1961,6.13,31.07
+Table 2 lower block (alternatives),e5-tel-r2-s603,results/eval/e5-tel-r2-s603.log,test,40,8,3.75,20.0,8,3054,9.54,19.18
+Table 2 lower block (alternatives),e5-tel-s601,results/eval/e5-tel-s601.log,test,40,8,1.56,10.0,4,3111,9.72,19.34
+Tables 3-4 (dose and information controls),sc-tel-obs_mask-s601,results/eval/sc-tel-obs_mask-s601.log,test,40,8,17.81,37.5,15,3172,9.91,18.65
+Tables 3-4 (dose and information controls),sc-tel-obs_mask-s602,results/eval/sc-tel-obs_mask-s602.log,test,40,8,31.56,42.5,14,3294,10.29,18.45
+Tables 3-4 (dose and information controls),sc-tel-schema_random-s601,results/eval/sc-tel-schema_random-s601.log,test,40,8,19.06,30.0,12,2314,7.23,25.76
+Tables 3-4 (dose and information controls),sc-tel-schema_random-s602,results/eval/sc-tel-schema_random-s602.log,test,40,8,22.81,32.5,12,2231,6.97,25.51
+Tables 3-4 (dose and information controls),td20-s601,results/eval/td20-s601.log,test,40,8,2.5,20.0,8,4557,14.24,9.33
+Tables 3-4 (dose and information controls),td20-s602,results/eval/td20-s602.log,test,40,8,0.0,0.0,0,3267,10.21,16.42
+Tables 3-4 (dose and information controls),td5-s601,results/eval/td5-s601.log,test,40,8,0.0,0.0,0,2171,6.78,26.8
+Tables 3-4 (dose and information controls),td5-s602,results/eval/td5-s602.log,test,40,8,0.0,0.0,0,2297,7.18,25.47
 Section 6.1 (uncapped exploratory controls),tp-mismatch-s601,results/eval/tp-mismatch-s601.log,test,40,8,41.56,52.5,14,5444,17.01,1.14
 Section 6.1 (uncapped exploratory controls),tp-mismatch-s602,results/eval/tp-mismatch-s602.log,test,40,8,41.25,52.5,15,5255,16.42,1.94
 Section 6.1 (uncapped exploratory controls),tp-shuffle-s601,results/eval/tp-shuffle-s601.log,test,40,8,32.19,50.0,19,6329,19.78,6.18
 Section 6.1 (uncapped exploratory controls),tp-shuffle-s602,results/eval/tp-shuffle-s602.log,test,40,8,36.88,52.5,18,6078,18.99,2.94
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-commonsft-icl6,results/eval/8b-commonsft-icl6.log,test,40,8,1.25,10.0,4,887,2.77,50.94
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-icl12-s0,results/eval/8b-instruct-icl12-s0.log,test,40,8,40.0,52.5,8,5577,17.43,0.0
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-icl3-s0,results/eval/8b-instruct-icl3-s0.log,test,40,8,37.5,40.0,2,5418,16.93,0.0
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-icl6,results/eval/8b-instruct-icl6.log,test,40,8,41.88,50.0,6,5571,17.41,0.0
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-icl6-s1,results/eval/8b-instruct-icl6-s1.log,test,40,8,42.19,50.0,5,4877,15.24,0.0
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-icl6-s2,results/eval/8b-instruct-icl6-s2.log,test,40,8,40.62,50.0,6,5772,18.04,0.0
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-selfexp-s401-nothink,results/eval/8b-instruct-selfexp-s401-nothink.log,test,40,8,31.56,45.0,13,6077,18.99,0.15
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-selfexp-s402-nothink,results/eval/8b-instruct-selfexp-s402-nothink.log,test,40,8,19.06,52.5,20,6911,21.6,0.26
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-selfexp-s403-nothink,results/eval/8b-instruct-selfexp-s403-nothink.log,test,40,8,25.94,42.5,16,5556,17.36,3.31
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s401-icl6,results/eval/8b-instruct-xfer-s401-icl6.log,test,40,8,38.75,42.5,5,5070,15.84,0.08
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s401-nothink,results/eval/8b-instruct-xfer-s401-nothink.log,test,40,8,38.44,45.0,10,5725,17.89,0.16
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s402-icl6,results/eval/8b-instruct-xfer-s402-icl6.log,test,40,8,37.81,45.0,8,4519,14.12,0.48
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s402-nothink,results/eval/8b-instruct-xfer-s402-nothink.log,test,40,8,32.19,42.5,13,5530,17.28,1.02
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s403-icl6,results/eval/8b-instruct-xfer-s403-icl6.log,test,40,8,38.12,45.0,10,5285,16.52,0.41
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-instruct-xfer-s403-nothink,results/eval/8b-instruct-xfer-s403-nothink.log,test,40,8,31.87,42.5,13,5960,18.62,1.1
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-selfexp,results/eval/8b-selfexp.log,test,40,8,1.25,7.5,3,5153,16.1,0.35
-"Tables 1, 6, 7 (offline reuse and self-exploration)",8b-xfer,results/eval/8b-xfer.log,test,40,8,26.87,47.5,19,6394,19.98,0.5
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-commonsft-s601,results/eval/grpo-commonsft-s601.log,test,40,8,0.0,0.0,0,1256,3.92,41.36
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-instruct-s601,results/eval/grpo-instruct-s601.log,test,40,8,44.06,62.5,16,6290,19.66,0.88
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-instruct-s602,results/eval/grpo-instruct-s602.log,test,40,8,42.81,60.0,16,6296,19.68,0.83
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-instruct-s603,results/eval/grpo-instruct-s603.log,test,40,8,57.81,67.5,11,5692,17.79,0.3
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-xferstart-s601,results/eval/grpo-xferstart-s601.log,test,40,8,40.31,42.5,6,5298,16.56,0.09
-"Tables 1, 6, 7 (offline reuse and self-exploration)",grpo-xferstart-s602,results/eval/grpo-xferstart-s602.log,test,40,8,40.31,42.5,6,5182,16.19,0.1
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-8b-base-selfexp,results/math/math-8b-base-selfexp.log,test,300,4,13.0,31.67,89,3707,3.09,2.22
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-8b-base-xfer,results/math/math-8b-base-xfer.log,test,300,4,21.75,51.33,148,7087,5.91,5.44
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-8b-icl4,results/math/math-8b-icl4.log,test,300,4,28.92,52.67,127,6521,5.43,1.02
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-8b-selfexp,results/math/math-8b-selfexp.log,test,300,4,26.92,51.0,135,6786,5.66,1.91
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-8b-xfer,results/math/math-8b-xfer.log,test,300,4,18.25,43.33,124,7340,6.12,6.21
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-grpo-instruct-s601,results/eval/math-grpo-instruct-s601.log,test,300,4,36.75,61.67,140,6324,5.27,4.82
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-grpo-instruct-s602,results/eval/math-grpo-instruct-s602.log,test,300,4,35.33,60.67,137,6461,5.38,3.02
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-grpo-instruct-s603,results/eval/math-grpo-instruct-s603.log,test,300,4,33.75,56.67,125,6412,5.34,4.3
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-rft-instruct-s501,results/eval/math-rft-instruct-s501.log,test,300,4,33.08,62.0,159,5014,4.18,16.06
-"Tables 1, 6, 7 (offline reuse and self-exploration)",math-rft-instruct-s502,results/eval/math-rft-instruct-s502.log,test,300,4,32.83,56.67,139,4520,3.77,2.8
-"Tables 1, 6, 7 (offline reuse and self-exploration)",rft-commonsft-s501,results/eval/rft-commonsft-s501.log,test,40,8,8.44,17.5,6,7027,21.96,0.43
-"Tables 1, 6, 7 (offline reuse and self-exploration)",rft-commonsft-s502,results/eval/rft-commonsft-s502.log,test,40,8,3.12,12.5,5,6464,20.2,0.12
-"Tables 1, 6, 7 (offline reuse and self-exploration)",rft-instruct-s501,results/eval/rft-instruct-s501.log,test,40,8,28.44,52.5,18,6062,18.94,0.61
-"Tables 1, 6, 7 (offline reuse and self-exploration)",rft-instruct-s502,results/eval/rft-instruct-s502.log,test,40,8,32.5,45.0,12,5800,18.12,0.65
-Discussion (source-data scaling),8b-base-xfer-weak-p100s1,results/eval/8b-base-xfer-weak-p100s1.log,test,40,8,30.0,45.0,16,6225,19.45,0.05
-Discussion (source-data scaling),8b-base-xfer-weak-p25,results/eval/8b-base-xfer-weak-p25.log,test,40,8,14.06,45.0,18,6749,21.09,0.31
-Discussion (source-data scaling),8b-base-xfer-weak-p50,results/eval/8b-base-xfer-weak-p50.log,test,40,8,25.0,45.0,16,6450,20.16,0.11
-Discussion (source-data scaling),8b-base-xfer-weak-p75,results/eval/8b-base-xfer-weak-p75.log,test,40,8,29.06,45.0,18,6694,20.92,0.07
-Discussion (source-data scaling),8b-xfer-bare-p25,results/eval/8b-xfer-bare-p25.log,test,40,8,31.25,45.0,14,5623,17.57,0.16
-Discussion (source-data scaling),8b-xfer-bare-p50,results/eval/8b-xfer-bare-p50.log,test,40,8,25.94,45.0,18,6252,19.54,0.19
-Discussion (source-data scaling),8b-xfer-bare-p75,results/eval/8b-xfer-bare-p75.log,test,40,8,28.44,47.5,17,6304,19.7,0.61
-Table 8 (permutation control),bc3-4b,results/eval/bc3-4b.log,test,40,8,29.38,45.0,17,6367,19.9,0.06
-Table 8 (permutation control),bc3-8b,results/eval/bc3-8b.log,test,40,8,32.81,47.5,18,6416,20.05,0.02
-Table 8 (permutation control),fmtctl-4b,results/eval/fmtctl-4b.log,test,40,8,2.19,17.5,7,5806,18.14,0.1
-Table 8 (permutation control),fmtctl-8b,results/eval/fmtctl-8b.log,test,40,8,5.63,27.5,11,6006,18.77,0.0
-Table 8 (permutation control),init-eos-4b,results/eval/init-eos-4b.log,test,40,8,0.94,5.0,2,2216,6.92,22.35
-Table 8 (permutation control),init-eos-8b,results/eval/init-eos-8b.log,test,40,8,0.0,0.0,0,1087,3.4,42.91
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-commonsft-icl6,results/eval/8b-commonsft-icl6.log,test,40,8,1.25,10.0,4,887,2.77,50.94
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-icl12-s0,results/eval/8b-instruct-icl12-s0.log,test,40,8,40.0,52.5,8,5577,17.43,0.0
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-icl3-s0,results/eval/8b-instruct-icl3-s0.log,test,40,8,37.5,40.0,2,5418,16.93,0.0
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-icl6,results/eval/8b-instruct-icl6.log,test,40,8,41.88,50.0,6,5571,17.41,0.0
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-icl6-s1,results/eval/8b-instruct-icl6-s1.log,test,40,8,42.19,50.0,5,4877,15.24,0.0
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-icl6-s2,results/eval/8b-instruct-icl6-s2.log,test,40,8,40.62,50.0,6,5772,18.04,0.0
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-selfexp-s401-nothink,results/eval/8b-instruct-selfexp-s401-nothink.log,test,40,8,31.56,45.0,13,6077,18.99,0.15
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-selfexp-s402-nothink,results/eval/8b-instruct-selfexp-s402-nothink.log,test,40,8,19.06,52.5,20,6911,21.6,0.26
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-selfexp-s403-nothink,results/eval/8b-instruct-selfexp-s403-nothink.log,test,40,8,25.94,42.5,16,5556,17.36,3.31
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s401-icl6,results/eval/8b-instruct-xfer-s401-icl6.log,test,40,8,38.75,42.5,5,5070,15.84,0.08
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s401-nothink,results/eval/8b-instruct-xfer-s401-nothink.log,test,40,8,38.44,45.0,10,5725,17.89,0.16
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s402-icl6,results/eval/8b-instruct-xfer-s402-icl6.log,test,40,8,37.81,45.0,8,4519,14.12,0.48
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s402-nothink,results/eval/8b-instruct-xfer-s402-nothink.log,test,40,8,32.19,42.5,13,5530,17.28,1.02
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s403-icl6,results/eval/8b-instruct-xfer-s403-icl6.log,test,40,8,38.12,45.0,10,5285,16.52,0.41
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-instruct-xfer-s403-nothink,results/eval/8b-instruct-xfer-s403-nothink.log,test,40,8,31.87,42.5,13,5960,18.62,1.1
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-selfexp,results/eval/8b-selfexp.log,test,40,8,1.25,7.5,3,5153,16.1,0.35
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),8b-xfer,results/eval/8b-xfer.log,test,40,8,26.87,47.5,19,6394,19.98,0.5
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-commonsft-s601,results/eval/grpo-commonsft-s601.log,test,40,8,0.0,0.0,0,1256,3.92,41.36
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-instruct-s601,results/eval/grpo-instruct-s601.log,test,40,8,44.06,62.5,16,6290,19.66,0.88
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-instruct-s602,results/eval/grpo-instruct-s602.log,test,40,8,42.81,60.0,16,6296,19.68,0.83
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-instruct-s603,results/eval/grpo-instruct-s603.log,test,40,8,57.81,67.5,11,5692,17.79,0.3
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-xferstart-s601,results/eval/grpo-xferstart-s601.log,test,40,8,40.31,42.5,6,5298,16.56,0.09
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),grpo-xferstart-s602,results/eval/grpo-xferstart-s602.log,test,40,8,40.31,42.5,6,5182,16.19,0.1
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-8b-base-selfexp,results/math/math-8b-base-selfexp.log,test,300,4,13.0,31.67,89,3707,3.09,2.22
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-8b-base-xfer,results/math/math-8b-base-xfer.log,test,300,4,21.75,51.33,148,7087,5.91,5.44
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-8b-icl4,results/math/math-8b-icl4.log,test,300,4,28.92,52.67,127,6521,5.43,1.02
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-8b-selfexp,results/math/math-8b-selfexp.log,test,300,4,26.92,51.0,135,6786,5.66,1.91
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-8b-xfer,results/math/math-8b-xfer.log,test,300,4,18.25,43.33,124,7340,6.12,6.21
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-grpo-instruct-s601,results/eval/math-grpo-instruct-s601.log,test,300,4,36.75,61.67,140,6324,5.27,4.82
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-grpo-instruct-s602,results/eval/math-grpo-instruct-s602.log,test,300,4,35.33,60.67,137,6461,5.38,3.02
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-grpo-instruct-s603,results/eval/math-grpo-instruct-s603.log,test,300,4,33.75,56.67,125,6412,5.34,4.3
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-rft-instruct-s501,results/eval/math-rft-instruct-s501.log,test,300,4,33.08,62.0,159,5014,4.18,16.06
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),math-rft-instruct-s502,results/eval/math-rft-instruct-s502.log,test,300,4,32.83,56.67,139,4520,3.77,2.8
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),rft-commonsft-s501,results/eval/rft-commonsft-s501.log,test,40,8,8.44,17.5,6,7027,21.96,0.43
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),rft-commonsft-s502,results/eval/rft-commonsft-s502.log,test,40,8,3.12,12.5,5,6464,20.2,0.12
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),rft-instruct-s501,results/eval/rft-instruct-s501.log,test,40,8,28.44,52.5,18,6062,18.94,0.61
+Section 3.3 and Tables 5-6 (offline reuse and self-exploration),rft-instruct-s502,results/eval/rft-instruct-s502.log,test,40,8,32.5,45.0,12,5800,18.12,0.65
+Section 7.3 (source-data scaling),8b-base-xfer-weak-p100s1,results/eval/8b-base-xfer-weak-p100s1.log,test,40,8,30.0,45.0,16,6225,19.45,0.05
+Section 7.3 (source-data scaling),8b-base-xfer-weak-p25,results/eval/8b-base-xfer-weak-p25.log,test,40,8,14.06,45.0,18,6749,21.09,0.31
+Section 7.3 (source-data scaling),8b-base-xfer-weak-p50,results/eval/8b-base-xfer-weak-p50.log,test,40,8,25.0,45.0,16,6450,20.16,0.11
+Section 7.3 (source-data scaling),8b-base-xfer-weak-p75,results/eval/8b-base-xfer-weak-p75.log,test,40,8,29.06,45.0,18,6694,20.92,0.07
+Section 7.3 (source-data scaling),8b-xfer-bare-p25,results/eval/8b-xfer-bare-p25.log,test,40,8,31.25,45.0,14,5623,17.57,0.16
+Section 7.3 (source-data scaling),8b-xfer-bare-p50,results/eval/8b-xfer-bare-p50.log,test,40,8,25.94,45.0,18,6252,19.54,0.19
+Section 7.3 (source-data scaling),8b-xfer-bare-p75,results/eval/8b-xfer-bare-p75.log,test,40,8,28.44,47.5,17,6304,19.7,0.61
+Section 6.2 (permutation control),bc3-4b,results/eval/bc3-4b.log,test,40,8,29.38,45.0,17,6367,19.9,0.06
+Section 6.2 (permutation control),bc3-8b,results/eval/bc3-8b.log,test,40,8,32.81,47.5,18,6416,20.05,0.02
+Section 6.2 (permutation control),fmtctl-4b,results/eval/fmtctl-4b.log,test,40,8,2.19,17.5,7,5806,18.14,0.1
+Section 6.2 (permutation control),fmtctl-8b,results/eval/fmtctl-8b.log,test,40,8,5.63,27.5,11,6006,18.77,0.0
+Section 6.2 (permutation control),init-eos-4b,results/eval/init-eos-4b.log,test,40,8,0.94,5.0,2,2216,6.92,22.35
+Section 6.2 (permutation control),init-eos-8b,results/eval/init-eos-8b.log,test,40,8,0.0,0.0,0,1087,3.4,42.91
+Table 2 (transfer SFT to GRPO),8b-xfer-rebuilt,results/eval/8b-xfer-rebuilt.log,test,40,8,24.06,45.0,18,6408,20.02,0.31
+Table 2 (transfer SFT to GRPO),xs-grpo-tel-s601,results/eval/xs-grpo-tel-s601.log,test,40,8,43.75,50.0,7,5225,16.33,0.36
+Table 2 (transfer SFT to GRPO),xs-grpo-tel-s602,results/eval/xs-grpo-tel-s602.log,test,40,8,42.5,47.5,9,5075,15.86,0.41
+Table 2 (transfer SFT to GRPO),xs-grpo-tel-s603,results/eval/xs-grpo-tel-s603.log,test,40,8,41.88,45.0,9,5299,16.56,0.34
+Table 6 (mobile-data ICL),8b-instruct-icl6-mobile-s0,results/eval/8b-instruct-icl6-mobile-s0.log,test,40,8,34.06,47.5,13,5914,18.48,0.0
+Table 6 (mobile-data ICL),8b-instruct-icl6-mobile-s1,results/eval/8b-instruct-icl6-mobile-s1.log,test,40,8,40.31,47.5,9,5623,17.57,0.0
+Table 6 (mobile-data ICL),8b-instruct-icl6-mobile-s2,results/eval/8b-instruct-icl6-mobile-s2.log,test,40,8,34.38,47.5,12,6212,19.41,0.0
+Table 5 (cross-family offline comparison),hermes8b-icl6,results/eval/hermes8b-icl6.log,test,40,8,28.44,47.5,18,4830,15.09,3.42
+Table 5 (cross-family offline comparison),hermes8b-start,results/eval/hermes8b-start.log,test,40,8,10.31,47.5,19,5890,18.41,3.84
+Table 5 (cross-family offline comparison),hermes8b-xfer,results/eval/hermes8b-xfer.log,test,40,8,31.25,52.5,19,6456,20.18,0.12
+Section 6.1 (matched-cohort math transfer SFT),sc-math-xfer,results/eval/sc-math-xfer.log,test,300,4,20.25,49.0,142,7235,6.03,5.36

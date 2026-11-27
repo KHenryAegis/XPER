@@ -9,7 +9,7 @@
 # empty-think-block shortcut of the earlier single-seed pipeline cannot appear. SFT recipe held fixed
 # (full-param FSDP, 2 ep, lr 1e-5, grad-accum 2); the seeds vary the rollout data.
 # GPUs 0-1 belong to another user. Any failure aborts.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

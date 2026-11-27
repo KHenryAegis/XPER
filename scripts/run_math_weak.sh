@@ -4,7 +4,7 @@
 # (seed 700, n=1) vs SFT on the 4B source's successes; bare SFT (2 ep, lr 1e-5), eval 300x4.
 # Sampling uses --max-tokens 1024 (the base model mostly runs to the cap; 2048 made a turn ~500 s);
 # all evals use 2048 like the strong pipeline.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

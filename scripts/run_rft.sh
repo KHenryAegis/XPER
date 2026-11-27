@@ -9,7 +9,7 @@
 #   weak start:   START=models/xper/8b-commonsft/final TAG=rft-commonsft THINK=""
 # Other envs: ENVARGS (sampling + eval, e.g. "--env math --max-steps 12 --max-tokens 2048
 #   --env-workers 48"), SPLIT (train split name), EVALARGS (default "--n 8"), BUDGET.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

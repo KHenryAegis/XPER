@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Math env: source (4B-Instruct) explores the train split once -> the experience store the target
 # may reuse. Its env calls are the budget the target's self-exploration is matched against.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

@@ -5,7 +5,7 @@
 #   transfer : SFT on the source's (4B-Instruct) successes
 #   icl      : source successes as in-context examples, no training
 # Bare SFT (2 ep, lr 1e-5), eval with --no-think on the 300 test problems x4.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

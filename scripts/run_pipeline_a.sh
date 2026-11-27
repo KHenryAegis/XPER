@@ -9,7 +9,7 @@
 #   3  eval 2a and 2b on test (40 tasks x 8)
 #
 # Same init, same SFT recipe, same eval for every arm. Logs: results/pipeline_a/.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

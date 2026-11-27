@@ -1,15 +1,14 @@
-"""Statistical and evidence-integrity checks for the paper analysis."""
-import importlib.util
+"""Checks for the reported task-bootstrap intervals and evaluation records."""
+import gzip
 import json
 from pathlib import Path
-import sqlite3
+import sys
 
 import numpy as np
 import pytest
 
-SPEC = importlib.util.spec_from_file_location("coldstart_analysis", Path(__file__).resolve().parents[1] / "scripts/analyze_coldstart.py")
-analysis = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(analysis)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import reproduce as analysis
 
 
 def test_task_clusters_remain_paired_between_identical_arms():
@@ -30,32 +29,11 @@ def test_repeating_same_policy_does_not_artificially_narrow_task_interval():
     assert set(a[0]) == {0, .5, 1}
 
 
-def test_evaluation_rejects_duplicate_samples_with_correct_total_count(tmp_path):
-    path = tmp_path / "eval.db"
-    with sqlite3.connect(path) as db:
-        db.execute("CREATE TABLE trajectories(task_id TEXT,reward REAL,success INT,model_id TEXT,meta TEXT)")
-        db.executemany("INSERT INTO trajectories VALUES(?,?,?,?,?)", [
-            ("a", 1, 1, "model", json.dumps({"k": 0})),
-            ("a", 0, 0, "model", json.dumps({"k": 0})),
-        ])
-    with pytest.raises(ValueError, match="missing/duplicate"):
-        analysis.load_eval(path, tasks=1, samples=2, model="model")
-
-
-def test_recovery_merge_rejects_conflicting_completed_rounds(tmp_path):
-    first, recovered = tmp_path / "original.log", tmp_path / "recovery.log"
-    first.write_text('it 0: {"episodes": 128} | cumulative env calls 100\n')
-    recovered.write_text(first.read_text())
-    assert len(analysis.merge_history([first, recovered])) == 1
-    recovered.write_text('it 0: {"episodes": 128} | cumulative env calls 101\n')
-    with pytest.raises(ValueError, match="conflicting"):
-        analysis.merge_history([first, recovered])
-
-
-def test_post_injection_summary_excludes_the_injection_round():
-    rows = [dict(iteration=i, injected=x, env_calls=10*(i+1), target_successes=s, episodes=8)
-            for i, (x, s) in enumerate([(1, 0), (1, 1), (0, 4), (0, 8)])]
-    result = analysis.after_injection(rows)
-    assert result["post_injection_rounds"] == 2
-    assert result["post_injection_calls"] == 20
-    assert result["post_injection_target_success_rate"] == .75
+def test_evaluation_rejects_duplicate_samples_with_correct_total_count(tmp_path, monkeypatch):
+    monkeypatch.setattr(analysis, "RECORDS", tmp_path)
+    (tmp_path / "eval").mkdir()
+    with gzip.open(tmp_path / "eval/model.jsonl.gz", "wt") as stream:
+        for reward in (1, 0):
+            print(json.dumps({"task": "a", "k": 0, "reward": reward}), file=stream)
+    with pytest.raises(ValueError, match="duplicate"):
+        analysis.episodes("eval", "model", tasks=1, samples=2)

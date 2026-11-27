@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ICL robustness on the strong start (8B-Instruct thinking-off): example draws (icl seed) and k.
 # Usage: GPUS="6 7" bash scripts/run_icl_sweep.sh "6:1" "6:2" "3:0" "12:0"   (k:seed per run)
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 set -uo pipefail
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

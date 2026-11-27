@@ -2,7 +2,10 @@
 /results/
 /logs/
 /third_party/
-/data/external/
+/data/external/*
+!/data/external/math/
+/data/external/math/*
+!/data/external/math/train.jsonl
 # generated tables, figures and checkpoints of a local run
 /outputs/
 # caches

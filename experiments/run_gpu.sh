@@ -13,9 +13,13 @@ steps=(
   07_alternatives_probe.sh
   08_permutation.sh
   08_source_scaling.sh
+  10_reuse_comparisons.sh
 )
 if [[ ${1:-} == --list && $# == 1 ]]; then
-  printf 'experiments/%s\n' "${steps[@]}"
+  for step in "${steps[@]}"; do
+    if [[ "$step" == 01_source_logs.sh ]]; then printf 'experiments/%s --published\n' "$step"
+    else printf 'experiments/%s\n' "$step"; fi
+  done
   exit 0
 fi
 if (( $# )); then echo "Usage: bash experiments/run_gpu.sh [--list]" >&2; exit 2; fi
@@ -23,7 +27,7 @@ if (( $# )); then echo "Usage: bash experiments/run_gpu.sh [--list]" >&2; exit 2
 export XPER_PYTHON=${XPER_PYTHON:-$(command -v python)}
 for step in "${steps[@]}"; do
   printf '\nRunning experiments/%s\n' "$step"
-  bash "experiments/$step"
+  if [[ "$step" == 01_source_logs.sh ]]; then bash "experiments/$step" --published
+  else bash "experiments/$step"; fi
 done
 "$XPER_PYTHON" -B tools/export_eval_summaries.py --require-paper-runs --out outputs/gpu/eval_summaries.csv
-"$XPER_PYTHON" -B scripts/analyze_alternatives.py --probe-only --out outputs/gpu

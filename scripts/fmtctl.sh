@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Format control: identical trajectories with permuted action order (state->action mapping destroyed).
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 cd "$(dirname "$0")/.."; export PYTHONPATH="$PWD" PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 PY=${XPER_PYTHON:-$XPER_HOME/miniconda3/envs/xper/bin/python}
 TR=$(dirname "$PY")/torchrun

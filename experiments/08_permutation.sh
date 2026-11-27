@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Step 8: permutation control (Section 6.3, Table 8). Delimiter-initialized Qwen3-8B-Base and Qwen3-4B-Base, no
+# Step 8: permutation control (Section 6.2). Delimiter-initialized Qwen3-8B-Base and Qwen3-4B-Base, no
 # ToolACE warm-up: untrained, SFT on the 223 source trajectories with actions permuted inside each trajectory, and
 # SFT on the real trajectories (2 epochs, lr 1e-5). Runs init-eos-{8b,4b}, fmtctl-{8b,4b}, bc3-{8b,4b}. Needs steps 0-1.
 source "$(dirname "$0")/common.sh"

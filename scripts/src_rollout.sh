@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Source experience on leak-free telecom train_full: 4B-Instruct, stratified tasks, 8 GPU shards.
-: "${XPER_HOME:?set XPER_HOME to the directory that contains XPER/, models/ and miniconda3/ (see README)}"
+: "${XPER_HOME:?set XPER_HOME to the parent of models/ (see experiments/README.md)}"
 cd "$(dirname "$0")/.."
 export PYTHONPATH="$PWD"
 PY=${XPER_PYTHON:-$XPER_HOME/miniconda3/envs/xper/bin/python}

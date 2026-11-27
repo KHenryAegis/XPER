@@ -1,5 +1,5 @@
 {
-  "_about": "External datasets, benchmark code and models used by the paper. None is redistributed here. tools/check_inputs.py verifies the local copies against this file; tools/fetch_tau2.sh reads the tau2-bench commit from it.",
+  "_about": "External inputs for the paper's GPU experiments. tools/check_inputs.py verifies local copies and tools/fetch_inputs.py downloads the pinned model snapshots and ToolACE.",
   "datasets": {
     "tau2-bench-telecom": {
       "used_for": "telecom environment: every telecom experiment (Sections 3-7)",
@@ -18,7 +18,9 @@
       "local_path": "data/external/math/train.jsonl",
       "bytes": 17464192,
       "sha256": "c0f2da4d543eb04ba1cca2548cc057f51bb48dc51e1ca73935012a246862bc41",
-      "obtain": "download train.jsonl from the rStar2-Agent release into data/external/math/"
+      "obtain": "included in this repository; tools/check_inputs.py verifies the SHA-256",
+      "license": "Apache-2.0 (DAPO-Math-17k); packaging from the rStar2-Agent release",
+      "upstream": "https://github.com/microsoft/rStar/blob/main/data_preprocess/dapo_rstar2_agent_loop.py"
     },
     "toolace": {
       "used_for": "building the weak telecom start (one epoch of generic function-calling SFT on Qwen3-8B-Base)",
@@ -27,39 +29,58 @@
       "local_path": "data/external/toolace.json",
       "bytes": 37154735,
       "sha256": "ba12c083fca7e8da48c67ad5b895e495447da7c66e39a2e19742c082e6cb537e",
-      "obtain": "download the ToolACE data file into data/external/toolace.json",
+      "obtain": "python -B tools/fetch_inputs.py",
       "derived": {
         "path": "data/external/common_sft.jsonl",
         "built_by": "python -B scripts/prep_common_sft.py",
         "bytes": 33104659,
         "sha256": "2b954566d063ba0ce44624e0cb86433a27378317607a44bc2d9e4e07d98e5f71",
-        "stats": {"source": 11300, "kept": 10216,
-                  "dropped": {"unparsable_call": 265, "leak_term": 75, "bad_tools": 744},
-                  "assistant_action_turns": 9656, "assistant_text_turns": 2980}
-      }
+        "stats": {
+          "source": 11300,
+          "kept": 10216,
+          "dropped": {
+            "unparsable_call": 265,
+            "leak_term": 75,
+            "bad_tools": 744
+          },
+          "assistant_action_turns": 9656,
+          "assistant_text_turns": 2980
+        }
+      },
+      "url": "https://huggingface.co/datasets/Team-ACE/ToolACE/resolve/e0db1bccf18d6d02cbb03b1ecb63fafb21525311/data.json"
     }
   },
   "models": {
     "Qwen3-4B-Instruct-2507": {
       "role": "source model (both environments)",
       "huggingface": "Qwen/Qwen3-4B-Instruct-2507",
-      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c"
+      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
     },
     "Qwen3-8B": {
       "role": "strong target (thinking disabled)",
       "huggingface": "Qwen/Qwen3-8B",
-      "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+      "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218"
     },
     "Qwen3-8B-Base": {
       "role": "weak target after delimiter initialization (scripts/prep_init.py); telecom adds the ToolACE SFT",
       "huggingface": "Qwen/Qwen3-8B-Base",
-      "index_sha256": "cd39d5e44c5aadfd1954b598883aea1c4a98822a2f7723d214ef2278b7fec2e4"
+      "index_sha256": "cd39d5e44c5aadfd1954b598883aea1c4a98822a2f7723d214ef2278b7fec2e4",
+      "revision": "49e3418fbbbca6ecbdf9608b4d22e5a407081db4"
     },
     "Qwen3-4B-Base": {
-      "role": "second target of the permutation control (Table 8)",
+      "role": "second target of the permutation control (Section 6.2)",
       "huggingface": "Qwen/Qwen3-4B-Base",
-      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c"
+      "index_sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+      "revision": "906bfd4b4dc7f14ee4320094d8b41684abff8539"
     },
-    "_note": "Expected under $XPER_HOME/models/hf/<name>. index_sha256 is the SHA-256 of model.safetensors.index.json in the copy the experiments used."
+    "_note": "Expected under $XPER_HOME/models/hf/<name>. The repository revisions and model index hashes identify the inputs.",
+    "Hermes-3-Llama-3.1-8B": {
+      "role": "non-Qwen target for zero-shot, ICL and transfer SFT",
+      "huggingface": "NousResearch/Hermes-3-Llama-3.1-8B",
+      "revision": "896ea440e5a9e6070e3d8a2774daf2b481ab425b",
+      "index_sha256": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b"
+    }
   }
 }
